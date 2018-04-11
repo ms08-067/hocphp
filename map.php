@@ -82,7 +82,7 @@ for(var i = 0; i < datas.length; i++){
             
             console.log("Driver Id: "+datas[i].driver_id+", Position_"+i+": "+ datas[i]['map_lat'] + ","+ datas[i]['map_lng']);
 
-            /*
+            
             $.post("1.php",{
 
                 ori_map_lat: datas[i]['map_lat'],
@@ -126,7 +126,7 @@ for(var i = 0; i < datas.length; i++){
                   }
 
             });
-            */
+            
 
         }, i * 300000);
 
