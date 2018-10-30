@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<style type="text/css">
+    .k-picker-wrap input[type="text"]:focus {
+        \n\tbackground-color: #40A4C8!important;
+        \n\tcolor: #fff!important;
+        \n
+    }
+    
+    \n.custom-width-800 .ngdialog-content {
+        \n\twidth: 597px!important;
+        \n height: 350px;
+        \n -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.53);
+        \n box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.53);
+        \n
+    }
+    
+    \n.custom-width-800 .ngdialog-content .ngdialog-close {
+        \n\tright: -7px!important;
+        \n\ttop: -5px;
+        \n
+    }
+    
+    \n.new-cover img {
+        \n\t width: 50px;
+        \n position: absolute;
+        \n top: -11px;
+        \n left: 110px;
+        \n
+    }
+    
+    \n.new-text {
+        \n\tbackground: #e81d62;
+        \n border: medium none;
+        \n color: #FFF;
+        \n float: left;
+        \n font-weight: normal;
+        \n font-size: 9px;
+        \n line-height: 8px;
+        \n padding: 4px;
+        \n text-transform: none;
+        \n -webkit-transition: all, 0.2s, ease-in-out;
+        \n -o-transition: all, 0.2s, ease-in-out;
+        \n transition: all, 0.2s, ease-in-out;
+        \n font-weight: normal;
+        \n font-style: normal;
+        \n
+    }
+</style>
+<div id="greet-ui" ng-init="Tabb2b=1" ng-init="Tabb2bChange" ng-init="showPhone">
+    <div class="svg-paths-container">
+        <svg xmlns="http://ww.w3.org/2000/svg">
+            <symbol id="cloud-1" viewBox="0 0 42.539 13.954">
+                <path d="M28.586 0c-5.257 0-9.83 2.91-12.21 7.205-1.178-.703-2.55-1.115-4.022-1.115-1.845 0-3.54.64-4.88 1.705-.388-.076-.788-.118-1.198-.118C2.81 7.677 0 10.487 0 13.954h42.538C42.54 6.248 36.295 0 28.587 0z"></path>
+            </symbol>
+            <symbol id="cloud-2" viewBox="0 0 39.22 12.24">
+                <path d="M32.942 5.963c-1.212 0-2.34.35-3.3.944C27.66 2.823 23.486 0 18.64 0 14.074 0 10.1 2.504 7.996 6.208c-.547-.156-1.123-.245-1.72-.245C2.81 5.963 0 8.773 0 12.24h39.218c.002-3.467-2.81-6.277-6.276-6.277z"></path>
+            </symbol>
+            <symbol id="cloud-3" viewBox="0 0 36.261 12.238">
+                <path d="M29.984 5.962c-.848 0-1.654.17-2.393.475C25.526 2.605 21.477 0 16.815 0 11.16 0 6.414 3.84 5.01 9.05c-.453-.212-.952-.338-1.484-.338C1.58 8.712 0 10.292 0 12.238H36.26c0-3.466-2.81-6.276-6.276-6.276z"></path>
+            </symbol>
+            <symbol id="buildings-1" viewBox="0 0 215.424 42.497">
+                <path d="M209.496 35.927v6.032h-2.066V28.802h-3.862V24.94h-4.49v6.916l-2.29-2.29h-3.28v2.65l-7.725-3.794v-7.455h-4.13v4.49h-2.696v2.965l-2.515 11.382-2.56-2.56V15.427h-7.08v1.77h-1.77v-1.264h-1.265v1.77h-2.53V11.67l-1-5.834-1.15 5.985v6.01h-2.402v-3.287h-9.99v3.162h-2.656v6.828h-6.198V0h-7.587v24.912h-3.54V10.37h-7.082v14.542h-2.404v-4.066l-4.67-3.015h-7.726l-4.676 2.687v4.65H98.64v-2.638l-6.788 1.14-.006 1.496h-6.694l-5.986-5.835v3.18h-4.12l-2.077-2.444v5.732h-4.68v-12.52h-4.426V25.8h-2.782V7.208h-7.967v15.05h-5.31V7.968h-6.703v31.698l-1.52-.077v-4.554H36.8v5.06h-2.53V28.84l-1.01-5.944h-.002l-1.517 5.818v6.892H21.183l-2.846 2.845h-5.058V24.668h-8.22v13.53H2.783v-3.92H0v8.22h40.155l.99-.006h132.738v.007h41.54v-6.57"></path>
+            </symbol>
+            <symbol id="facebook" viewBox="0 0 29.7 26.6">
+                <path d="M28.7 3v21.2c0 1.3-1.1 2.4-2.4 2.4H20V15.8h3.8l.5-3.2H20V10c0-1 .9-1.8 1.8-1.8h1.4V4.9H20c-3.2 0-4.3 1.6-4.3 4.3v3.2h-3.2v3.2h3.2v10.8H5.1c-1.3 0-2.4-1.1-2.4-2.4V3C2.7 1.7 3.8.6 5.1.6h21.2c1.3 0 2.4 1.1 2.4 2.4z"></path>
+            </symbol>
+            <symbol id="twitter" viewBox="0 0 29.7 24">
+                <path d="M28.3 3.4c-.1 0-.3.1-.4.1-.8.2-.9-.1-.3-.7.3-.3.5-.6.7-.9.5-.7.1-1.1-.7-.7l-.9.3c-.8.3-2-.1-2.7-.6-.9-.6-2-.9-3.2-.9-1.7 0-3.1.6-4.2 1.8-1.2 1.2-1.8 2.6-1.8 4.3v.7c0 .4-.6.7-1.5.5-1.7-.3-3.5-.8-5.2-1.7-1.6-.9-3.1-2-4.4-3.3-.6-.6-1.4-.6-1.6.3-.1.5-.2 1-.2 1.6 0 1 .2 2 .7 2.9.2.4.5.8.8 1.2.6.6.5.9-.3.7-.7-.2-1.3-.5-1.3-.5 0 1.5.5 2.7 1.4 3.8.6.7 1.2 1.2 1.9 1.6.8.4 1.1.6.7.7-.3 0-.5.1-.8.1h-.6c-.3 0-.4.6.1 1.4.5.5.9 1 1.5 1.5s1.2.8 1.9 1c.8.2 1 .7.3 1.1-1.8 1.1-3.9 1.7-6.1 1.7h-.7c-.4 0-.1.3.6.7C4.4 23.3 7 24 9.8 24c2.1 0 4.1-.3 6-1 1.9-.7 3.5-1.6 4.8-2.7 1.3-1.1 2.5-2.5 3.4-3.9 1-1.5 1.7-3 2.1-4.7.5-1.6.7-3.2.7-4.9v-.4c0-.2.6-.8 1.2-1.4.3-.3.6-.6.8-.9.6-.6.4-1-.5-.7z"></path>
+            </symbol>
+        </svg>
+    </div>
+    <div id="loader-wrapper">
+        <div id="bg">
+            <div class="bg-pattern"></div>
+        </div><img class="logoxy" src="./assets/images/logox.svg" alt="golconnect24-logo">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div ng-if="lang===\'vi\'" id="banner-ad" class="banner-vi" ng-show="vm.showAds">
+        <div class="close" ng-click="vm.showAds=false;"><i class="fa fa-times" aria-hidden="true"></i></div>
+    </div>
+    <div ng-if="lang===\'en\'" id="banner-ad" class="banner-en" ng-show="vm.showAds">
+        <div class="close" ng-click="vm.showAds=false;"><i class="fa fa-times" aria-hidden="true"></i></div>
+    </div>
+    <div class="hover-banner-ad" ng-show="vm.showAds" ng-click="vm.showAds=false;"></div>
+    <header itemscope itemtype="http://schema.org/LocalBusiness" id="f_header" class="default" data-ng-class="{\'active\' : showMenu}">
+        <div class="logoHeader">
+            <a href="/"><img itemprop="image" src="./assets/images/logogcn_small.png" alt="golconnect24-logo"></a>
+        </div>
+        <div class="f_menuFixedWrap">
+            <div class="usermenuArea" ng-show="islogin">
+                <ul class="usermenuList sf-js-enabled">
+                    <li class="usermenuLogin"><a href="#profile" class="user-popup-link inited">{{display_name}}</a></li>
+                    <li class="usermenuLogin" style="margin-right:3px; margin-left:3px"><a href="javascript:void(0);" class="user-popup-link inited">|</a></li>
+                    <li class="usermenuLogin"><a href="#logout" class="user-popup-link inited">{{translation.Common.Logout}}</a></li>
+                </ul>
+            </div>
+            <div class="f_wrapTopMenu">
+                <div class="f_topMenu f_main">
+                    <div class="f_menu-button" ng-click="showMenu = !showMenu" data-ng-class="{\'active\' : showMenu}"><i></i> <i></i> <i></i> <i></i></div>
+                    <nav class="f_main-nav" data-ng-class="{\'active\' : showMenu}" ng-show="showMenu">
+                        <div class="nav-bg" style="width: 1345.78601568006px; height: 1345.78601568006px; top: -583.893007840028px; left: -446.893007840028px"></div>
+                        <ul class="nav-items">
+                            <li><a href="#" class="f_home">Giới Thiệu</a></li>
+                            <li ng-show="islogin" class="usermenuLogin"><a href="#profile" class="user-popup-link inited">Đặt Sân</a> <a href="javascript:void(0);" ng-show="islogin" class="languageChange user-popup-link inited" style="margin-right:3px; margin-left:3px">| </a><a href="#logout" class="user-popup-link inited">{{translation.Common.Logout}}</a></li>
+                            <li ng-show="islogout" class="usermenuLogin"><a href="#login" class="user-popup-link inited">{{translation.Common.Login}}</a></li>
+                            <li><a ng-click="vm.gotoSelectPage()">{{translation.GolfConnect24.Label.Booking}}</a></li>
+                            <li><a href="#/coming-event">Sự kiện</a></li>
+                            <li><a href="#/play_stay">Stay &amp; Play</a></li>
+                            <li><a href="http://blog.golfconnect24.com/tag/en/" ng-if="lang===\'en\'">Blog</a> <a href="http://blog.golfconnect24.com/tag/vn/" ng-if="lang===\'vi\'">Blog</a></li>
+                            <li><a href="#">{{translation.GolfConnect24.Label.CONTACT_US}}</a></li>
+                        </ul>
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://www.facebook.com/GolfConnect24" class="facebook" target="_blank">
+                                    <svg class="icon facebook">
+                                        <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="f_nav-overlay" data-ng-class="{\'active\' : showMenu}"></div>
+                    <div class="sc_columns sc_columns_5 sc_columns_indent">
+                        <ul class="f_leftMenu">
+                            <li clas="logo-menu">
+                                <a href="/"><img itemprop="image" src="./assets/images/logo_homepage.png" alt="golconnect24-logo"></a>
+                            </li>
+                        </ul>
+                        <ul class="f_rightMenu">
+                            <li class="language-menu"><img ng-show="!vm.isVi" ng-click="translate(\'vi\'); vm.isVi=true;" src="./assets/images/flag_en.png" alt="golconnect24-vi"><span ng-show="!vm.isVi">En</span> <img ng-show="vm.isVi" ng-click="translate(\'en\'); vm.isVi=false;" src="./assets/images/flag_vi.png" alt="golconnect24-en"> <span ng-show="vm.isVi">Vi</span></li>
+                            <li>
+                                <ul class="usermenuList sf-js-enabled">
+                                    <li ng-show="islogout" class="usermenuLogin"><a href="#login" class="user-popup-link inited">{{translation.Common.Login}}</a></li>
+                                </ul>
+                            </li>
+                            <li class="blog-menu">Gallery<a href="" ng-if="lang===\'en\'">Gallery</a> <a href="http://blog.golfconnect24.com/tag/vn/" ng-if="lang===\'vi\'">Gallery</a></li>
+                            <li><a href="#/coming-event">Sự kiện</a></li>
+                            <li><a href="#/play_stay">Stay &amp; Play</a></li>
+                            <li class="booking-menu"><a ng-click="vm.gotoSelectPage()">Đặt Sấn</a></li>
+                            <li class="home-menu"><a href="/">Giới Thiệu</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><a href="#"><i id="moveDown"><svg width="30px" height="30px" version="1.1" id="Layer_1" xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><polygon fill="#FFFFFF" points="55.7,19.2 51.5,15.1 30,36.6 8.5,15.1 4.3,19.2 30,44.9 30,44.9 30,44.9 "></polygon></svg></i></a>
+    <style type="text/css">
+        .tablet-view {
+            \n \tposition: fixed;
+            \n\t width: 38%;
+            \n\t left: 12%;
+            \n\t top: 150px;
+            \n\t/* bottom: 105px; */
+            \n\t/* margin-left: -10.4075em; */
+            \n\t z-index: 4;
+            \n
+        }
+        
+        \n .tablet-view .mask {
+            \n \t top: 5.8%;
+            \n\t left: 6.5%;
+            \n\t right: 12%;
+            \n\t bottom: 8.6%;
+            \n\t position: absolute;
+            \n\t overflow: hidden;
+            \n\t border: solid 1px #bbb;
+            \n
+        }
+        
+        \n .text-slide-2 {
+            \n\t\t\t\t left: 55%!important;
+            \n\t\t\t
+        }
+        
+        \n @media (max-width:768px) {
+            \n \t.tablet-view {
+                \n \t\t width: calc(100% - 90px);
+                \n \t\tleft: 90px;
+                \n \t
+            }
+            \n \t.text-slide-2 {
+                \n \t\tleft: calc(50% - 14.8em)!important;
+                \n \t
+            }
+            \n
+        }
+    </style>
+    <section class="fixed-content">
+        <div class="content">
+            <div class="tablet-view" ng-show="!showPhone"><img src="./assets/images/ipad.png" alt="GolfConnect24-Tablet">
+                <div class="mask">
+                    <div class="screens" style="background-color: #000">
+                        <div ng-show="isEvent" class="flex-video widescreen vimeo">
+                            <iframe id="playerA" width="1280" height="720" src="https://www.youtube.com/embed/xK6rT9ukhn8?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div ng-show="isScoreCard" class="scorecard-video flex-video widescreen vimeo">
+                            <iframe id="playerB" width="1280" height="720" src="https://www.youtube.com/embed/pUyJOPyxsy8?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="iphone-containerf" data-ng-class="{\'hidden\' : (Tabb2bChange===2 && Tabb2b===4) || (Tabb2bChange===1 && Tabb2b===3) ||showPhone===false }"><img src="./assets/images/iphonewhite.png" alt="golfbooking-iphone" class="iphone">
+                <div class="mask">
+                    <ul class="screens">
+                        <li ng-class="{active:Tabb2b===1}">
+                            <div class="change_text_mobile"><img src="./assets/images/booking-app-1.jpg" alt="golfbooking-iphone1"> <img src="./assets/images/booking-app-2.jpg" alt="golfbooking-iphone2"> <img src="./assets/images/booking-app-3.jpg" alt="golfbooking-iphone3"></div>
+                        </li>
+                        <li ng-class="{active:Tabb2b===2}"><img width="473" height="858" src="./assets/images/ads-1.jpg" alt="golfbooking-tablet1"></li>
+                    </ul>
+                </div>
+                <div class="holder-bg">
+                    <div class="background-booking">
+                        <div class="bg_iphone_1">
+                            <div class="row">
+                                <div class="booking-tilte">{{translation.GolfConnect24.Label.DATE}}</div>
+                                <div class="field-option">
+                                    <input kendo-date-picker id="date-picker-searchteetime" onkeydown="return false;" ng-model="vm.teeTimeObj.display_date" k-options="vm.datepPickerOpt" k-ng-model="vm.teeTimeObj.date">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="booking-tilte">{{translation.GolfConnect24.Label.TIME}}</div><span class="tee-time-from-home" ng-bind="vm.teeTimeObj.from_time_label"></span> <span class="tee-time-to-home" ng-bind="vm.teeTimeObj.to_time_label"></span>
+                                <div class="field-option-time" gf-dual-slider-home from-date-label="vm.teeTimeObj.from_time_label" to-date-label="vm.teeTimeObj.to_time_label" from-date="vm.teeTimeObj.from_time" to-date="vm.teeTimeObj.to_time" min="330" max="960" step="30">
+                                    <div class="sliders_step1">
+                                        <div id="slider-range"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="booking-tilte">{{translation.GolfConnect24.Label.CITY}}</div>
+                                <div class="field-option">
+                                    <select kendo-drop-down-list k-data-text-field="\'name\'" k-data-value-field="\'id\'" ng-model="vm.teeTimeObj.city" ng-change="vm.getCourseByCity(vm.teeTimeObj.city)" k-data-source="vm.searchForm.city"></select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="booking-tilte">{{translation.GolfConnect24.Label.Golfcourse}}</div>
+                                <div class="field-option" id="golf-course-searchteetime">
+                                    <select kendo-drop-down-list k-data-text-field="\'name\'" k-data-value-field="\'id\'" ng-model="vm.teeTimeObj.golfcourse" k-data-source="vm.searchForm.golfcourse"></select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div style="cursor:pointer" ng-click="vm.gotoSelectPage()" class="field-option radius">{{translation.GolfConnect24.Label.FIND_TEETIME}}</div>
+                            </div>
+                            <div class="infobox">
+                                <div class="info_dot"></div>
+                            </div>
+                        </div>
+                        <div class="bg_iphone_2">
+                            <div class="slides">
+                                <div class="xyinfobox"><img src="./assets/images/event/0.jpg" alt="golfevent">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/2.jpg" alt="golfescore">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/4.jpg" alt="golfescore2">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/3.jpg" alt="golfescore3">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/3.1.jpg" alt="golfescore4">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/5.jpg" alt="golfescore5">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/6.jpg" alt="golfescore6">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/7.jpg" alt="golfescore7">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/7.1.jpg" alt="golfescore8">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/8.jpg" alt="golfescore93">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/9.jpg" alt="golfescore10">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/10.jpg" alt="golfescore11">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/11.jpg" alt="golfescore12">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/12.jpg" alt="golfescore13">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/13.jpg" alt="golfescore14">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/escore-card/14.jpg" alt="golfescore15"></div>
+                            </div>
+                        </div>
+                        <div class="bg_iphone_ps">
+                            <div class="slides">>
+                                <div class="xyinfobox"><img src="./assets/images/details.png" alt="golf-playstay"></div>
+                            </div>
+                        </div>
+                        <div class="bg_iphone_4">
+                            <div class="slides">
+                                <div class="xyinfobox"><img src="./assets/images/event/0.jpg" alt="golf-event-details">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/1.jpg" alt="golf-leaderboard">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/2.jpg" alt="golf-leaderboard2">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/3.jpg" alt="golf-leaderboard3">
+                                    <div class="infobox"><img src="./assets/images/swipe-left.png" alt="golf-leaderboard4" class="swipe-left"></div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/4.jpg" alt="golf-leaderboard52">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/5.jpg" alt="golf-leaderboard6">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/6.jpg" alt="golf-leaderboard7">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/7.jpg" alt="golf-leaderboard8">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/8.jpg" alt="golf-leaderboard9">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/9.jpg" alt="golf-leaderboard10">
+                                    <div class="infobox">
+                                        <div class="info_dot"></div>
+                                    </div>
+                                </div>
+                                <div class="xyinfobox"><img src="./assets/images/guide/12.jpg" alt="golf-leaderboard11"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style type="text/css"></style>
+            <div data-ng-class="{\'text-slide-2\' :showPhone===false}" class="text-slide">
+                <div class="content-section-1 fadeOutUp">
+                    <div class="get-this-app" style="margin-top: 235px"><span>{{translation.GolfConnect24.HomepageText.GET_APP}}</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div>
+                </div>
+                <div class="content-section-2 fadeInUp fadeOutUp">
+                    <div class="radius">
+                        <h2 class="hiw-slogan"><i class="fa fa-info-circle" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> Stay and Play</h2><span class="hiw-tilte" ng-class="{active:show_desc}"><i class="fa fa-times-circle-o" ng-init="show_desc" ng-click="show_desc=!show_desc"></i>{{translation.GolfConnect24.HomepageText.STAY_PLAY_DESCRIPTION}}</span></div>
+                    <div class="get-this-app"><span>{{translation.GolfConnect24.HomepageText.GET_APP}}</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div>
+                </div>
+                <div class="content-section-4 fadeInUp fadeOutUp">
+                    <div class="radius">
+                        <h2 class="hiw-slogan"><i class="fa fa-info-circle" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> Scorecard</h2><span class="hiw-tilte" ng-class="{active:show_desc}"><i class="fa fa-times-circle-o" ng-init="show_desc" ng-click="show_desc=!show_desc"></i>{{translation.GolfConnect24.HomepageText.SCORECARD_DESCRIPTION}}</span></div>
+                    <div class="get-this-app"><span>{{translation.GolfConnect24.HomepageText.GET_APP}}</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div>
+                </div>
+                <div class="content-section-3 fadeInUp fadeOutUp">
+                    <div class="radius">
+                        <h2 class="hiw-slogan"><i class="fa fa-info-circle" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> {{translation.GolfConnect24.HomepageText.EVENTS_TITLE}}</h2><span class="hiw-tilte" ng-class="{active:show_desc}"><i class="fa fa-times-circle-o" ng-init="show_desc" ng-click="show_desc=!show_desc"></i>{{translation.GolfConnect24.HomepageText.EVENTS_DESCRIPTION}}<br></span></div>
+                    <div class="get-this-app"><span>{{translation.GolfConnect24.HomepageText.GET_APP}}</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div>
+                </div>
+                <div class="content-section-5 fadeInUp fadeOutUp">
+                    <div class="radius">
+                        <h2 class="hiw-slogan"><i class="fa fa-info-circle" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> {{translation.GolfConnect24.HomepageText.LEADERBOARD_TITLE}}</h2><span class="hiw-tilte" ng-class="{active:show_desc}"><i class="fa fa-times-circle-o" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> {{translation.GolfConnect24.HomepageText.LEADERBOARD_DESCRIPTION}}</span></div>
+                    <div class="get-this-app"><span>{{translation.GolfConnect24.HomepageText.GET_APP}}</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="fullpage">
+        <div class="section" id="section-home" ng-init="showPhone=true">
+            <div class="f_w-section f_w-home">
+                <div class="download-app"><span class="home-download-title">{{translation.GolfConnect24.HomepageText.GET_APP}}:</span>
+                    <p class="home-download-store">
+                        <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><img src="./assets/images/icon_playstore.png" class="download-android">Google Play</a>
+                    </p>
+                    <p class="home-download-store">
+                        <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><img src="./assets/images/icon_applestore.png" class="download-ios">Apple Store</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section-playstay">
+            <div class="display_screen">
+                <div class="landscape">
+                    <div class="clouds"><img src="./assets/images/ps-cloud-1.png" alt="" class="ps-cloud-1"> <img src="./assets/images/ps-cloud-2.png" alt="" class="ps-cloud-2"></div>
+                    <div class="ps-mobile"><img src="../images/ps-phone.png" alt="" class="ps-phone"> <img src="./assets/images/ps-stars.png" alt="" class="ps-stars"> <img src="./assets/images/ps-location-1.png" alt="" class="ps-location-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section-event">
+            <div class="display_screen">
+                <div class="landscape">
+                    <div class="clouds">
+                        <svg class="icon cloud-1">
+                            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-1"></use>
+                        </svg>
+                        <svg class="icon cloud-2">
+                            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-2"></use>
+                        </svg>
+                        <svg class="icon cloud-3">
+                            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-3"></use>
+                        </svg>
+                    </div>
+                    <div class="even-trees"><img src="./assets/images/event-tree-1.png" alt="" class="even-tree-1"><img src="./assets/images/event-tree-2.png" alt="" class="even-tree-2"><img src="./assets/images/event-tree-3.png" alt="" class="even-tree-3"><img src="./assets/images/event-tree-4.png" alt="" class="even-tree-4"></div>
+                    <div class="even-golfers"><img src="./assets/images/event-golfers.png" alt=""></div>
+                    <div class="even-buggy"><img src="./assets/images/event-buggy.png" alt=""></div>
+                    <div class="even-hole"><img src="./assets/images/event-hole.png" alt=""></div>
+                    <div class="even-ground"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section-scorecard">
+            <div class="display_screen">
+                <div class="landscape">
+                    <div class="clouds">
+                        <svg class="icon cloud-1">
+                            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-1"></use>
+                        </svg>
+                        <svg class="icon cloud-2">
+                            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-2"></use>
+                        </svg>
+                        <svg class="icon cloud-3">
+                            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-3"></use>
+                        </svg>
+                    </div>
+                    <div class="buildings">
+                        <svg class="icon buildings-1">
+                            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#buildings-1"></use>
+                        </svg>
+                        <svg class="icon cloud-1">
+                            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-1"></use>
+                        </svg>
+                        <svg class="icon cloud-2">
+                            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-2"></use>
+                        </svg>
+                    </div>
+                    <div class="trees"><img src="./assets/images/tree-1.svg" alt="" class="tree-1"><img src="./assets/images/tree-2.svg" alt="" class="tree-2">
+                        <div class="tree-3">
+                            <div class="side"></div>
+                        </div>
+                        <div class="tree-4">
+                            <div class="side"></div>
+                        </div>
+                    </div>
+                    <div class="ground"></div>
+                    <div class="holes"><img src="./assets/images/holes.svg" alt="" class="tree-2"></div>
+                    <div class="caddy">
+                        <div class="caddy-body"><img src="./assets/images/caddy.svg" alt="" class="tree-2"></div>
+                        <div class="wheels"><span></span> <span></span></div>
+                        <div class="trails">
+                            <div class="mask"><span></span></div>
+                            <div class="mask"><span></span></div>
+                            <div class="mask"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section-leaderboard">
+            <div class="display_screen"></div>
+        </div>
+        <div class="section" id="section-b2b" ng-init="playVideo">
+            <div class="columns large-12 bg_b2b">
+                <div class="wrapper">
+                    <div class="feature-tabs">
+                        <div class="clearfix">
+                            <div class="devices">
+                                <div class="tablet"><img src="./assets/images/ipad.png" alt="Tablet">
+                                    <div class="mask">
+                                        <ul class="screens" ng-class="{active:playVideox}">
+                                            <li ng-class="{active:Tabb2b===1}">
+                                                <div class="change_text_tablet"><img src="./assets/images/booking-web-1.jpg" alt="screen01"> <img src="./assets/images/booking-web-2.jpg" alt="screen01"> <img src="./assets/images/booking-web-3.jpg" alt="screen01"></div>
+                                            </li>
+                                            <li ng-class="{active:Tabb2b===2}"><img src="./assets/images/ads-web-1.jpg" alt="4b"></li>
+                                            <li ng-class="{active:Tabb2b===3}">
+                                                <div class="change_text"><img src="./assets/images/report-golf-3.jpg" alt="screen01"> <img src="./assets/images/report-golf-2.jpg" alt="screen01"> <img src="./assets/images/report-golf-1.jpg" alt="screen01"></div>
+                                            </li>
+                                            <li ng-class="{active:Tabb2b===4}">
+                                                <div class="change_text"><img width="1223" height="917" src="./assets/images/report1.jpg" alt="screen01"> <img width="1223" height="917" src="./assets/images/report2.jpg" alt="screen01"> <img width="1223" height="917" src="./assets/images/report3.jpg" alt="screen01"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs" ng-init="Tabb2bChange=1">
+                                <div class="block-heading hidden-when-stack">
+                                    <h2><span ng-class="{active:Tabb2bChange===1}" ng-click="Tabb2bChange=1;Tabb2b=1">{{translation.GolfConnect24.HomepageText.GOLFCOURSES}}</span> <span ng-class="{\'active\':Tabb2bChange===2}" ng-click="Tabb2bChange=2; Tabb2b=4">{{translation.GolfConnect24.HomepageText.OTHER_BUSINESSES}}</span></h2></div>
+                                <div class="abcdef" ng-class="{active:Tabb2bChange===1}">
+                                    <ul class="nav-tabs">
+                                        <li ng-class="{active:Tabb2b===1}" ng-click="Tabb2b=1"><a><i class="ecommer"></i></a></li>
+                                        <li ng-class="{active:Tabb2b===2}" ng-click="Tabb2b=2"><a><i class="marketing"></i></a></li>
+                                        <li ng-class="{active:Tabb2b===3}" ng-click="Tabb2b=3"><a><i class="fa fa-line-chart"></i></a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane transition fade scale" ng-class="{active:Tabb2b===1}">
+                                            <h3>{{translation.GolfConnect24.HomepageText.ECOMMERCE_TITLE}}</h3>
+                                            <p>{{translation.GolfConnect24.HomepageText.ECOMMERCE_DESC}}</p>
+                                        </div>
+                                        <div class="tab-pane transition fade scale" ng-class="{active:Tabb2b===2}">
+                                            <h3>{{translation.GolfConnect24.HomepageText.ADS_TITLE1}}<br>{{translation.GolfConnect24.HomepageText.ADS_TITLE2}}</h3>
+                                            <p style="text-align: left">{{translation.GolfConnect24.HomepageText.ADS_DESC}}</p>
+                                        </div>
+                                        <div class="tab-pane transition fade scale" ng-class="{active:Tabb2b===3}">
+                                            <h3>{{translation.GolfConnect24.HomepageText.REALTIME_TITLE}}</h3>
+                                            <p style="text-align: left">{{translation.GolfConnect24.HomepageText.REALTIME_DESC}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="defcba" ng-class="{active:Tabb2bChange===2}">
+                                    <p style="padding: 30px;    text-align: left; color:#fff">{{translation.GolfConnect24.HomepageText.OTHER_BUSINESSES_DESC}}</p>
+                                </div>
+                                <div class="f_contact-us">
+                                    <h2>{{translation.GolfConnect24.HomepageText.JOIN_US}}</h2><a href="mailto:sales@golfconnect24.com" target="_blank" class="button btn_contact">{{translation.GolfConnect24.HomepageText.CONTACT_US}}</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="display_screen">
+                <div class="landscape"><img src="./assets/images/bg-b2b.svg" alt="" class="bg-b2b">
+                    <div class="clouds">
+                        <svg class="icon cloud-1">
+                            <use xmlns:xlink="www.w3.org/1999/xlink" xlink:href="#cloud-1"></use>
+                        </svg>
+                        <svg class="icon cloud-2">
+                            <use xmlns:xlink="www.w3.org/1999/xlink" xlink:href="#cloud-2"></use>
+                        </svg>
+                        <svg class="icon cloud-3">
+                            <use xmlns:xlink="www.w3.org/1999/xlink" xlink:href="#cloud-3"></use>
+                        </svg>
+                    </div>
+                    <div class="millhouse"><img src="./assets/images/millhouse.svg" alt="">
+                        <div class="swing"><img src="./assets/images/swing.svg" alt=""></div>
+                    </div>
+                </div>
+                <div id="f_footer">
+                    <div class="warp-footer">
+                        <div class="large-12 columns">
+                            <div class="small-6 medium-4 columns">
+                                <div itemprop="name" class="fbody-head">{{translation.GolfConnect24.Label.COMPANY_NAME}}</div>
+                                <div class="fbody-content">
+                                    <ul class="our-links">
+                                        <li class="ft-link-desc" style="color: #fff;font-size: 13px;font-weight: bold"><a itemprop="telephone" class="ft-hotline" href="https://golfconnect24.com">{{translation.GolfConnect24.Label.COMPANY_ADDRESS}}(+84)837 734607 <span style="display:block">{{translation.GolfConnect24.Label.COMPANY_BUSINESS_ID}}</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="small-6 medium-4 columns">
+                                <a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=18609"><img alt="" src="https://s3-ap-southeast-1.amazonaws.com/media.golfconnect24.com/Golfconnect24/assets/7APPSgItjc20IIl6Q%3D%3D.jpgx" style="margin-left: calc(50% - 75px)"></a>
+                            </div>
+                            <div class="small-6 medium-4 columns" style="padding-left: 10%; text-decoration: underline">
+                                <div class="fbody-content">
+                                    <ul class="our-links" style="font-weight: bold">
+                                        <li><a class="ft-link-desc" href="http://media.golfconnect24.com/Golfconnect24/files/Quy+ch%E1%BA%BF+s%C3%A0n.docx" title="Terms of Service">{{translation.GolfConnect24.Label.COMPANY_TERM}}</a></li>
+                                        <li><a class="ft-link-desc" href="http://media.golfconnect24.com/Golfconnect24/files/Ch%C3%ADnh+s%C3%A1ch+b%E1%BA%A3o+m%E1%BA%ADt+th%C3%B4ng+tin.docx" title="Äiá»u khoáº£n &amp; Quy cháº¿">{{translation.GolfConnect24.Label.COMPANY_PRIVACY}}</a></li>
+                                        <li><a class="ft-link-desc" href="//media.golfconnect24.com/Golfconnect24/files/C%C6%A1+ch%E1%BA%BF+gi%E1%BA%A3i+quy%E1%BA%BFt+tranh+ch%E1%BA%A5p.docx" title="CÆ¡ cháº¿ giáº£i quyáº¿t tranh cháº¥p">{{translation.GolfConnect24.Label.DISPUTE_SETTLEMENT}}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    window.$zopim || (function(d, s) {
+        var z = $zopim = function(c) {
+                z._.push(c)
+            },
+            $ = z.s = \nd.createElement(s),
+            e = d.getElementsByTagName(s)[0];
+        z.set = function(o) {
+            z.set.\n_.push(o)
+        };
+        z._ = [];
+        z.set._ = [];
+        $.async = !0;
+        $.setAttribute("charset", "utf-8");\
+        n$.src = "//v2.zopim.com/?3RkR88FoKZwj5Tbx65JOCnnXDC69F2O8";
+        z.t = +new Date;
+        $.\ntype = "text/javascript";
+        e.parentNode.insertBefore($, e)
+    })(document, "script"); < \/script><script>(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(window,document,\'script\',\'/ / www.google - analytics.com / analytics.js\ ',\'ga\');\n\n  ga(\'create\', \'UA-56059434-1\', \'auto\');\n  ga(\'send\', \'pageview\');<\/script><script type="text/javascript">$("#date-picker-searchteetime").on(\'click\', function () {\n            var datePicker = $(\'#date-picker-searchteetime\').data("kendoDatePicker");\n            if ($(\'#date-picker-searchteetime_dateview\').css(\'display\') == \'none\') {\n                datePicker.open();\n            } else {\n                datePicker.close();\n            }\n        });<\/script><script type="text/ng-template" id="youtube-dig"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZyDHhVIdXpI?rel=0&autoplay=1" frameborder="0" allowfullscreen ></iframe><\/script><script type="text/javascript">var tag = document.createElement(\'script\');\n      tag.src = "https://www.youtube.com/player_api";\n      var firstScriptTag = document.getElementsByTagName(\'script\')[0];\n      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n     \n\tvar LoadVideo = function(player_id){\n    console.log("load video:  "+player_id);\n    var Program = {\n    \n        Init: function(){\n            this.NewPlayer();\n            this.EventHandler();\n        },\n\n        NewPlayer: function(){\n            var _this = this;\n            this.Player = new YT.Player(player_id, {});\n            _this.Player.$element = $(\'#\' + player_id);\n        },\n\n        Play: function(){\n        \tif( this.Player.getPlayerState() === 1 ) return;\n            this.Player.playVideo();\n        },\n\n        Pause: function(){\n        \tif( this.Player.getPlayerState() === 2 ) return;\n            this.Player.pauseVideo();\n        },\n\n        ScrollControl: function(){\n        \tif( Utils.IsElementInViewport(this.Player.$element[0])>0 ) \n        \t\t{\n        \t\t\tthis.Play();\n        \t\t\tconsole.log("PLAY");\n        \t\t}else{\n        \t\t\tthis.Pause();\n        \t\t\tconsole.log("PAUSE");\n        \t\t} \n        },\n\n        EventHandler: function(){\n\n            var _this = this;\n            $(window).bind(\'mousewheel \', function(event){\n            \tconsole.log("call EventHandler");\n            \tsetTimeout(function(){\n\t\t\t\t  _this.ScrollControl();\n\t\t\t\t}, 2000);\n                \n            });\n        }\n        \n    };\n    \n    var Utils = {\n    \n        /** @author http://stackoverflow.com/a/7557433/1684970 */\n        IsElementInViewport: function(el){\n        \tconsole.log(el);\n            if (typeof jQuery === "function" && el instanceof jQuery) el = el[0];\n            var rect = el.getBoundingClientRect();\n            console.log(rect.top +" == "+rect.left+" == "+rect.bottom+" == "+rect.right);\n            return rect.top ;\n        }\n        \n    };\n    \n    return Program.Init();\n\n};\n\n\nwindow.onload = function(e){ \n     LoadVideo(\'playerA\');\n\t LoadVideo(\'playerB\');\n}<\/script>
+</body>
+</html>

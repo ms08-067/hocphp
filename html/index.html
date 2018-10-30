@@ -1,0 +1,491 @@
+<html ng-app="Golfconnect24" ng-controller="AppController" lang="vi,en" xml:lang="vi,en" class="k-webkit k-webkit70 ng-scope fp-enabled" style="overflow: hidden; height: 100%;">
+
+<head>
+
+    <title>Booking|Golf Travel|Online Golf Booking</title>
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="apple-itunes-app" content="app-id=963089620">
+    <meta name="description" content="Golfconnect24 is an golf app that lets golfers book golf online in real time, share golf scorecard, calculate handicap, and virtually connect with other golfers">
+    <meta name="keywords" content="golfer, golf booking, golf online booking, golf app, golf scorecard, golf course, golf handicap, golf tournament,golf event, golf travel, golf tourism, golf trip, scorecard, handicap, golf connect, Montgomerie Links Golf, Laguna Lăng Cô Golf, Chi Linh Star Golf ,  Long Thanh Golf">
+   
+    
+    <link rel="icon" type="image/png" href="/assets/images/splotlight.png">
+     <link rel="canonical" href="https://golfconnect24.com">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.3.4/css/ngDialog.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.3.4/css/ngDialog-theme-plain.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  
+	
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css" media="none" onload="if(media!='all')media='all'" />
+	
+	
+<link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflY6gPjD/www-widgetapi.js" async=""></script>
+
+<script src="https://www.youtube.com/player_api"></script>
+
+
+
+</script><script async="" charset="utf-8" src="//v2.zopim.com/?3RkR88FoKZwj5Tbx65JOCnnXDC69F2O8" type="text/javascript"></script>
+
+
+
+
+
+
+</head>
+
+<body ng-class="{'main':currentView !== 'home'}" class="loaded fp-viewing-5" style="overflow: hidden; height: 100%;">
+
+ <div ng-show="currentView !== 'home'" class="container ng-hide" style="overflow: hidden;">
+    <div ng-controller="HeaderController" ng-include="'header/header.tpl.html'" class="ng-scope">
+            <div class="header-wrapper ng-scope">
+                <div class="fixed-it"><div class="contain-to-grid"><nav class="top-bar" data-topbar="" role="navigation" ng-init="toggleMenu=false"><ul class="title-area">
+	
+	<li class="name"><a href="#/home"><img class="header-logo image-full" alt="logo header" src="./assets/images/whitelogo.png" style="height:30px"> 
+		
+		<img class="header-logo image-mobile" alt="logo header" src="./assets/images/logogcn.png" style="height:30px"></a>
+		
+	</li>
+
+		<div id="lang-box" ng-mouseover="show=true" ng-mouseleave="show=false"><span><!-- ngIf: lang=='vi' --> <!-- ngIf: lang=='en' --><span ng-if="lang=='en'" class="lang en ng-scope"></span><!-- end ngIf: lang=='en' --> <i class="fa fa-angle-down"></i></span><ul ng-show="show" class="dropdown-menu ng-hide"><li ng-click="translate('vi');show=false;"><span class="lang vi"></span>Tiếng Việt</li><li ng-click="translate('en');show=false;"><span class="lang en"></span>English</li></ul></div></ul><section class="top-bar-section"><div class="toggle-topbar menu-icon" ng-click="toggle_sidebar_res()"><a href=""></a></div><ul id="right-header" class="right"><ul class="right" ng-show="islogout" ng-init="this.selected = 'register'"><li><a ng-click="this.selected = 'login'" class="login-button ng-binding" href="#/login">Log in</a></li></ul><ul class="right ng-hide" ng-show="islogin"><li class="golfcourseshow ng-hide" ng-show="golfcourse"><a href="#/" class="ng-binding"></a></li><li class="display-name"><a href="#/profile" style="display:inline" class="ng-binding"><img alt="" class="img-circle"></a></li><li><a href="#/logout" class="logout" ng-click="this.selected = 'login'"><i class="fa fa-sign-out"></i></a></li></ul></ul></section></nav><div class="clearfix" style="background: #333"></div></div></div></div></div>
+        <div class="row content-section" ng-class="{'g-content':currentView !== 'home'}">
+            <div class="main-content" ng-class="{'unspaned':sidebar_pin}">
+                <div class="large-12 columns no-padding" style="z-index: 10">
+                    <div class="row golf-header">
+                        <div class="large-12 rows golf-menu">
+                            <!-- ngInclude: 'menu/menu.tpl.html' --><div ng-controller="MenuController" ng-include="'menu/menu.tpl.html'" class="ng-scope"><nav class="page-sidebar no-padding ng-scope" ng-class="{'active':sidebar_pin,'respon_active':sidebar_res}"><div class="sidebar-header"><a href="#/home">
+							
+	<img src="./assets/images/logo-white.png" alt="WPSNIFFER" class="brand" data-src="./assets/images/logo-white.png" style="height:30px"></a>
+	
+	<div class="sidebar-header-controls"><i class="fa fa-bars" ng-click="toggle_sidebar()" ng-class="{'active':sidebar_pin}"></i></div></div><i class="fa fa-times close_right_menu" ng-click="toggle_sidebar_res()"></i><div id="pri_staff" ng-show="isnotstaff" class="g-menu-nav"><ul class="home-menu"><li ui-sref-active="active" ng-class="{'g-menu-active': isActive('/home') }" class=""><a href="#/home" ng-click="toggle_sidebar_click()"><span class="ng-binding">Homepage</span> <i class="fa fa-home"></i>Giới Thiệu</a></li><li ui-sref-active="active" ng-class="{'g-menu-active': isActive('/coming-event') }"><a href="#/coming-event" ng-click="toggle_sidebar_click()"><span class="ng-binding">Sự kiện</span> <i class="fa fa-event"></i></a></li><li ui-sref-active="active" ng-class="{'g-menu-active': isActive('/online_booking/search-tee-time') || isActive('/online_booking/process/select') || isActive('/online_booking/process/contact') || isActive('/online_booking/process/finish')}"><a ng-click="toggle_sidebar_click();gotoSelectPage();"><span class="ng-binding">Find Tee times</span> <i class="fa fa-booking"></i></a></li><li ui-sref-active="active" ng-class="{'g-menu-active': isActive('/play_stay') }"><a href="#/play_stay" ng-click="toggle_sidebar_click()"><span class="ng-binding">Stay &amp; Play</span> <i class="fa fa-stayplay"></i></a></li><li ui-sref-active="active" ng-class="{'g-menu-active': isActive('/handicap') }"><!-- ngIf: lang==='en' --><a href="http://blog.golfconnect24.com/tag/en/" ng-click="toggle_sidebar_click()" ng-if="lang==='en'" class="ng-scope"><span>Blog</span> <i class="fa fa-pencil-square-o"></i> </a><!-- end ngIf: lang==='en' --><!-- ngIf: lang==='vi' --></li><li ui-sref-active="active" ng-show="isadmin" ng-class="{'g-menu-active': isActive('/gcadmin') }" class="ng-hide"><a href="#/gcadmin" ng-click="toggle_sidebar_click()"><span>Booking Details</span><i class="fa fa-clone"></i></a></li><li ui-sref-active="active" ng-show="isadmin" ng-class="{'g-menu-active': isActive('/cancelreport') }" class="ng-hide"><a href="#/cancelreport" ng-click="toggle_sidebar_click()"><span>Cancel Report</span><i class="fa fa-ban"></i></a></li><span class="title_download_app">Download App</span><li ui-sref-active="active" class="download_app_menu"><a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><span>Android</span> <i class="fa fa-android"></i></a></li><li ui-sref-active="active" class="download_app_menu"><a href="https://itunes.apple.com/us/app/id963089620?mt=8"><span>IOS</span> <i class="fa fa-apple"></i></a></li></ul></div><div ng-show="isstaff" class="g-menu-nav ng-hide"><ul class="home-menu"><li ui-sref-active="active" ng-show="!isadmin" ng-class="{'g-menu-active': isActive('/tee-times-management') }"><a href="#/tee-times-management" ng-click="toggle_sidebar_click()"><span>Tee Time Management</span><i class="fa fa-cog fa-2x"></i></a></li><li ui-sref-active="active" ng-show="isadmin" ng-class="{'g-menu-active': isActive('/gc24tee-times') }" class="ng-hide"><a href="#/gc24tee-times" ng-click="toggle_sidebar_click()"><span>Teetime Management</span><i class="fa fa-calendar"></i></a></li><li ui-sref-active="active" ng-show="isadmin" ng-class="{'g-menu-active': isActive('/gcadmin') }" class="ng-hide"><a href="#/gcadmin" ng-click="toggle_sidebar_click()"><span>Booking Details</span><i class="fa fa-file-excel-o"></i></a></li><li ui-sref-active="active" ng-show="isadmin" ng-class="{'g-menu-active': isActive('/cancelreport') }" class="ng-hide"><a href="#/cancelreport" ng-click="toggle_sidebar_click()"><span>Cancel Report</span><i class="fa fa-ban"></i></a></li><li ui-sref-active="active" ng-show="isadmin" class="setting-bg ng-hide" ng-class="{'g-menu-active': isActive('/commission') || isActive('/reports') , 'show':showSubmenu3}"><a href="" ng-click="show_Submenu3()"><span>Reports </span><i class="fa fa-line-chart"></i></a><ul class="sub-menu" ng-class="{'show':showSubmenu3}"><li class="nav-item start" ng-class="{'active': isActive('/statistics')}"><a href="#/statistics" ng-click="toggle_sidebar_click()"><span class="title">Statistics Report</span> <span class="selected"></span></a></li><li class="nav-item start" ng-class="{'active': isActive('/revenue')}"><a href="#/revenue" ng-click="toggle_sidebar_click()"><span class="title">Revenue Reports</span></a></li><li class="nav-item start" ng-class="{'active': isActive('/vendor-report')}"><a href="#/vendor-report" ng-click="toggle_sidebar_click()"><span class="title">Vendor AP Reports</span></a></li></ul></li><li ui-sref-active="active" ng-show="!isadmin" ng-class="{'g-menu-active': isActive('/checkins') }"><a href="#/checkins" ng-click="toggle_sidebar_click()"><span>Check-Ins</span><i class="fa fa-check-square-o"></i></a></li><li ui-sref-active="active" ng-show="!isadmin" class="setting-bg" ng-class="{'g-menu-active': isActive('/commission') || isActive('/reports') , 'show':showSubmenu}"><a href="" ng-click="show_Submenu()"><span>Reports </span><i class="fa fa-line-chart"></i></a><ul class="sub-menu" ng-class="{'show':showSubmenu}"><li class="nav-item start" ng-class="{'active': isActive('/commission')}"><a href="#/commission" ng-click="toggle_sidebar_click()"><span class="title">Commission</span></a></li><li class="nav-item start" ng-class="{'active': isActive('/reports')}"><a href="#/reports" ng-click="toggle_sidebar_click()"><span class="title">Weekly Reports</span></a></li></ul></li><li ui-sref-active="active" class="setting-bg" ng-class="{'g-menu-active': isActive('/buggy_setting') || isActive('/caddy_setting') , 'show':showSubmenu2}"><a href="" ng-click="show_Submenu2()"><span>Settings </span><i class="fa fa-wrench"></i></a><ul class="sub-menu" ng-class="{'show':showSubmenu2}"><li class="nav-item start" ng-class="{'active': isActive('/buggy_setting')}"><a href="#/buggy_setting" ng-click="toggle_sidebar_click()"><i class="icon-buggy"><img src="./assets/images/buggy.svg"></i><span class="title">Buggy</span> <span class="selected"></span></a></li><li class="nav-item start" ng-class="{'active': isActive('/caddy_setting')}"><a href="#/caddy_setting" ng-click="toggle_sidebar_click()"><i class="icon-buggy"><img src="./assets/images/caddy2.svg"></i><span class="title">Caddy</span></a></li><li class="nav-item start" ng-class="{'active': isActive('/deal_setting')}"><a href="#/deal_setting" ng-click="toggle_sidebar_click()"><i class="icon-buggy"><img src="./assets/images/caddy2.svg"></i><span class="title">Deal</span></a></li><li class="nav-item start" ng-class="{'active': isActive('/recurring_setting')}"><a href="#/recurring_setting" ng-click="toggle_sidebar_click()"><i class="fa fa-calendar" style="float: left;font-size: 15px;margin-top: -12px;margin-left: -7px;margin-right: 10px"></i> <span class="title">Recurring</span></a></li></ul></li></ul></div></nav></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- uiView: main --><div class="large-12 columns no-padding ng-scope" ui-view="main"></div>
+            </div>
+        </div>
+        <footer ng-controller="FooterController" ng-include="'footer/footer.tpl.html'" ng-class="{'unspaned':sidebar_pin}" class="ng-scope"></footer>
+    </div>
+    
+	
+	<div ng-show="currentView === 'home'" ui-view="home" class="f_fullpage ng-scope"><style type="text/css" class="ng-scope">.k-picker-wrap input[type="text"]:focus{
+	background-color: #40A4C8!important;
+	color: #fff!important;
+}
+.custom-width-800 .ngdialog-content{
+	width: 597px!important;
+    height: 350px;
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.53);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.53);
+}
+.custom-width-800 .ngdialog-content .ngdialog-close{
+	right: -7px!important;
+	top: -5px;
+}
+.new-cover img{
+	    width: 50px;
+    position: absolute;
+    top: -11px;
+    left: 110px;
+}
+.new-text{
+	background: #e81d62;
+    border: medium none;
+    color: #FFF;
+    float: left;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 8px;
+    padding: 4px;
+    text-transform: none;
+    -webkit-transition: all,0.2s,ease-in-out;
+    -o-transition: all,0.2s,ease-in-out;
+    transition: all,0.2s,ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+}
+
+</style>
+
+<div id="greet-ui" ng-init="Tabb2b=1" class="ng-scope"><div class="svg-paths-container">
+
+
+</div>
+
+<div id="loader-wrapper"><div id="bg"><div class="bg-pattern"></div></div>
+
+<!--<img class="logoxy" src="./assets/images/logox.svg"> -->
+
+<div id="loader"></div><div class="loader-section section-left"></div><div class="loader-section section-right"></div></div>
+
+
+<div ng-if="lang==='en'" id="banner-ad" class="banner-en ng-scope ng-hide" ng-show="vm.showAds"><div class="close" ng-click="vm.showAds=false;"><i class="fa fa-times" aria-hidden="true"></i></div></div>
+
+<div class="hover-banner-ad ng-hide" ng-show="vm.showAds" ng-click="vm.showAds=false;"></div><header itemscope="" itemtype="http://schema.org/LocalBusiness" id="f_header" class="default" data-ng-class="{'active' : showMenu}" style="display: block;"><div class="logoHeader"><a href="/"><img itemprop="image" src="./assets/images/logogcn_small.png" alt="golconnect24-logo"></a></div><div class="f_menuFixedWrap"><div class="usermenuArea ng-hide" ng-show="islogin"><ul class="usermenuList sf-js-enabled"><li class="usermenuLogin"><a href="#profile" class="user-popup-link inited ng-binding"></a></li><li class="usermenuLogin" style="margin-right:3px; margin-left:3px"><a href="javascript:void(0);" class="user-popup-link inited">|</a></li><li class="usermenuLogin"><a href="#logout" class="user-popup-link inited ng-binding">Log out</a></li></ul></div><div class="f_wrapTopMenu"><div class="f_topMenu f_main"><div class="f_menu-button" ng-click="showMenu = !showMenu" data-ng-class="{'active' : showMenu}"><i></i> <i></i> <i></i> <i></i></div>
+
+<nav class="f_main-nav ng-hide" data-ng-class="{'active' : showMenu}" ng-show="showMenu"><div class="nav-bg" style="width: 1345.78601568006px; height: 1345.78601568006px; top: -583.893007840028px; left: -446.893007840028px"></div><ul class="nav-items">
+
+<li><a href="#" class="f_home">Giới Thiệu</a></li>
+
+<li ng-show="islogin" class="usermenuLogin ng-hide"><a href="#profile" class="user-popup-link inited ng-binding"></a> <a href="javascript:void(0);" ng-show="islogin" class="languageChange user-popup-link inited ng-hide" style="margin-right:3px; margin-left:3px">| </a><a href="#logout" class="user-popup-link inited ng-binding">Log out</a></li>
+
+<li class="usermenuLogin"><a href="#login" class="user-popup-link inited ng-binding">Log in</a></li>
+
+<li><a class="">Find Tee times</a></li>
+
+<li><a href="#/coming-event" class="">Sự kiện</a></li>
+
+<li><a href="#/play_stay">Stay &amp; Play</a></li>
+
+<li><a href="http://blog.golfconnect24.com/tag/en/" ng-if="lang==='en'" class="ng-scope" style="">Blog</a></li>
+
+<li><a href="#" class="ng-binding">Contact Us</a></li></ul><ul class="social-links">
+
+<li><a href="https://www.facebook.com/GolfConnect24" class="facebook" target="_blank"><svg class="icon facebook"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li></ul></nav><div class="f_nav-overlay" data-ng-class="{'active' : showMenu}"></div><div class="sc_columns sc_columns_5 sc_columns_indent"><ul class="f_leftMenu"><li clas="logo-menu"><a href="/">
+
+<img itemprop="image" src="./assets/images/logo_homepage.png" alt="golconnect24-logo">
+
+</a></li></ul>
+
+<ul class="f_rightMenu">
+
+<li class="language-menu">
+
+<img ng-show="!vm.isVi" ng-click="translate('vi'); vm.isVi=true;" src="./assets/images/flag_en.png" alt="golconnect24-vi">
+ <span ng-show="!vm.isVi">En</span> <img ng-show="vm.isVi" ng-click="translate('en'); vm.isVi=false;" src="./assets/images/flag_vi.png" alt="golconnect24-en" class="ng-hide"> <span ng-show="vm.isVi" class="ng-hide">Vi</span></li>
+ <li>
+
+<ul class="usermenuList sf-js-enabled">
+
+    <li ng-show="islogout" class="usermenuLogin">
+        <a href="#login" class="user-popup-link inited ng-binding">Log in</a></li>
+    </ul></li>
+
+    <li class="blog-menu"><a href="" ng-if="lang==='en'" class="ng-scope">Gallery</a></li><li><a href="#/coming-event" class="ng-binding">Sự kiện</a></li>
+
+ <li><a href="#/play_stay">Stay &amp; Play</a></li>
+
+ <li class="booking-menu"><a class="ng-binding">Đặt Sân</a></li>
+
+ <li class="home-menu"><a href="/">Giới Thiệu</a></li>
+
+</ul>
+
+ </div></div></div></div></header><a href="#"><i id="moveDown" style="display: block;"></i></a><style type="text/css">.tablet-view{
+    	position: fixed;
+	    width: 38%;
+	    left: 12%;
+	    top: 150px;
+	    /* bottom: 105px; */
+	    /* margin-left: -10.4075em; */
+	    z-index: 4;
+    }
+    .tablet-view .mask{
+    	    top: 5.8%;
+	    left: 6.5%;
+	    right: 12%;
+	    bottom: 8.6%;
+	    position: absolute;
+	    overflow: hidden;
+	    border: solid 1px #bbb;
+    }
+    .text-slide-2{
+				    left: 55%!important;
+			}
+    @media (max-width:768px){
+    	.tablet-view{
+    		    width: calc(100% - 90px);
+    		left: 90px;
+    	}
+    	.text-slide-2{
+    		left: calc(50% - 14.8em)!important;
+    	}
+    }
+	
+</style>
+
+<section class="fixed-content" style="display: block;"><div class="content"><div class="tablet-view ng-hide" ng-show="!showPhone" style=""><img src="./assets/images/ipad.png" alt="GolfConnect24-Tablet"><div class="mask"><div class="screens" style="background-color: #000"><div ng-show="isEvent" class="flex-video widescreen vimeo ng-hide" style="">
+
+    <iframe id="playerA" width="1280" height="720" src="https://www.youtube.com/embed/xK6rT9ukhn8?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe></div><div ng-show="isScoreCard" class="scorecard-video flex-video widescreen vimeo ng-hide" style=""><iframe id="playerB" width="1280" height="720" src="https://www.youtube.com/embed/pUyJOPyxsy8?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+
+
+    </div></div></div></div><div class="iphone-containerf" data-ng-class="{'hidden' : (Tabb2bChange===2 &amp;&amp; Tabb2b===4) || (Tabb2bChange===1 &amp;&amp; Tabb2b===3) ||showPhone===false }"><img src="./assets/images/iphonewhite.png" alt="golfbooking-iphone" class="iphone">
+
+<div class="mask"><ul class="screens"><li ng-class="{active:Tabb2b===1}" class="active"><div class="change_text_mobile slick-initialized slick-slider"><div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 820px; transform: translate3d(-164px, 0px, 0px);"><img src="./assets/images/booking-app-3.jpg" alt="golfbooking-iphone3" class="slick-slide slick-cloned" data-slick-index="-1" style="width: 164px;"><img src="./assets/images/booking-app-1.jpg" alt="golfbooking-iphone1" class="slick-slide slick-active" data-slick-index="0" style="width: 164px;"><img src="./assets/images/booking-app-2.jpg" alt="golfbooking-iphone2" class="slick-slide" data-slick-index="1" style="width: 164px;"><img src="./assets/images/booking-app-3.jpg" alt="golfbooking-iphone3" class="slick-slide" data-slick-index="2" style="width: 164px;"><img src="./assets/images/booking-app-1.jpg" alt="golfbooking-iphone1" class="slick-slide slick-cloned" data-slick-index="3" style="width: 164px;"></div></div>  </div></li><li ng-class="{active:Tabb2b===2}"><img width="473" height="858" src="./assets/images/ads-1.jpg" alt="golfbooking-tablet1"></li></ul></div><div class="holder-bg"><div class="background-booking"><div class="bg_iphone_1"><div class="row"><div class="booking-tilte ng-binding">Date</div><div class="field-option"><span class="k-widget k-datepicker k-header ng-pristine ng-untouched ng-valid" style=""><span class="k-picker-wrap k-state-default"><input kendo-date-picker="" id="date-picker-searchteetime" onkeydown="return false;" ng-model="vm.teeTimeObj.display_date" k-options="vm.datepPickerOpt" k-ng-model="vm.teeTimeObj.date" class="ng-pristine ng-untouched ng-valid k-input" data-role="datepicker" type="text" role="combobox" aria-expanded="false" aria-owns="date-picker-searchteetime_dateview" aria-disabled="false" aria-readonly="false" style="width: 100%;"><span unselectable="on" class="k-select" role="button" aria-controls="date-picker-searchteetime_dateview"><span unselectable="on" class="k-icon k-i-calendar">select</span></span></span></span></div></div><div class="row"><div class="booking-tilte ng-binding">Time</div><span class="tee-time-from-home ng-binding" ng-bind="vm.teeTimeObj.from_time_label">5:30</span> <span class="tee-time-to-home ng-binding" ng-bind="vm.teeTimeObj.to_time_label">16:00</span><div class="field-option-time ng-isolate-scope ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" gf-dual-slider-home="" from-date-label="vm.teeTimeObj.from_time_label" to-date-label="vm.teeTimeObj.to_time_label" from-date="vm.teeTimeObj.from_time" to-date="vm.teeTimeObj.to_time" min="330" max="960" step="30"><div class="sliders_step1"><div id="slider-range"></div></div><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 100%;"></span></div></div><div class="row"><div class="booking-tilte ng-binding">City</div><div class="field-option"><span class="k-widget k-dropdown k-header ng-untouched ng-valid ng-dirty ng-valid-parse" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-readonly="false" aria-busy="false" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input ng-scope"></span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><select kendo-drop-down-list="" k-data-text-field="'name'" k-data-value-field="'id'" ng-model="vm.teeTimeObj.city" ng-change="vm.getCourseByCity(vm.teeTimeObj.city)" k-data-source="vm.searchForm.city" class="ng-untouched ng-valid ng-dirty ng-valid-parse" data-role="dropdownlist" style="display: none;"></select></span></div></div><div class="row"><div class="booking-tilte ng-binding">Golf Course</div><div class="field-option" id="golf-course-searchteetime"><span class="k-widget k-dropdown k-header ng-untouched ng-valid ng-valid-parse ng-pristine" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-readonly="false" aria-busy="false" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input ng-scope">All</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><select kendo-drop-down-list="" k-data-text-field="'name'" k-data-value-field="'id'" ng-model="vm.teeTimeObj.golfcourse" k-data-source="vm.searchForm.golfcourse" class="ng-untouched ng-valid ng-valid-parse ng-pristine" data-role="dropdownlist" style="display: none;"><option value="-1" selected="selected">All</option></select></span></div></div><div class="row"><div style="cursor:pointer" ng-click="vm.gotoSelectPage()" class="field-option radius ng-binding">Find</div></div><div class="infobox"><div class="info_dot"></div></div></div><div class="bg_iphone_2"><div class="slides slick-initialized slick-slider"><div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 2628px; transform: translate3d(-1022px, 0px, 0px);"><div class="xyinfobox slick-slide slick-cloned" style="width: 146px;" data-slick-index="-1"><img src="./assets/images/14.jpg" alt="golfescore15"></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="0"><img src="./assets/images/event/0.jpg" alt="golfevent"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="1"><img src="./assets/images/escore-card/2.jpg" alt="golfescore"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="2"><img src="./assets/images/escore-card/4.jpg" alt="golfescore2"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="3"><img src="./assets/images/escore-card/3.jpg" alt="golfescore3"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="4"><img src="./assets/images/escore-card/3.1.jpg" alt="golfescore4"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="5"><img src="./assets/images/escore-card/5.jpg" alt="golfescore5"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="6"><img src="./assets/images/escore-card/6.jpg" alt="golfescore6"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="7"><img src="./assets/images/escore-card/7.jpg" alt="golfescore7"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="8"><img src="./assets/images/escore-card/7.1.jpg" alt="golfescore8"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="9"><img src="./assets/images/escore-card/8.jpg" alt="golfescore93"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="10"><img src="./assets/images/escore-card/9.jpg" alt="golfescore10"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide slick-active" style="width: 146px;" data-slick-index="11"><img src="./assets/images/escore-card/10.jpg" alt="golfescore11"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="12"><img src="./assets/images/escore-card/11.jpg" alt="golfescore12"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="13"><img src="./assets/images/escore-card/12.jpg" alt="golfescore13"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="14"><img src="./assets/images/escore-card/13.jpg" alt="golfescore14"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="15"><img src="./assets/images/escore-card/14.jpg" alt="golfescore15"></div><div class="xyinfobox slick-slide slick-cloned" style="width: 146px;" data-slick-index="16"><img src="./assets/images/event/0.jpg" alt="golfevent"><div class="infobox"><div class="info_dot"></div></div></div></div></div><button type="button" data-role="none" class="slick-prev" style="display: block;">Previous</button><button type="button" data-role="none" class="slick-next" style="display: block;">Next</button></div></div><div class="bg_iphone_ps"><div class="slides slick-initialized slick-slider"><div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 175px; transform: translate3d(0px, 0px, 0px);"><div class="xyinfobox slick-slide slick-active" style="width: 175px;" data-slick-index="0"><img src="./assets/images/guide/details.png" alt="golf-playstay"></div></div></div></div></div><div class="bg_iphone_4"><div class="slides slick-initialized slick-slider"><div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 1898px; transform: translate3d(-1022px, 0px, 0px);"><div class="xyinfobox slick-slide slick-cloned" style="width: 146px;" data-slick-index="-1"><img src="./assets/images/guide/12.jpg" alt="golf-leaderboard11"></div><div class="xyinfobox slick-slide slick-active" style="width: 146px;" data-slick-index="0"><img src="./assets/images/event/0.jpg" alt="golf-event-details"><div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="1">
+
+
+
+<img src="./assets/images/1.jpg" alt="golf-leaderboard">
+
+<div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="2">
+
+<img src="./assets/images/2.jpg" alt="golf-leaderboard2">
+
+<div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="3">
+
+<img src="./assets/images/3.jpg" alt="golf-leaderboard3">
+
+
+<div class="infobox">
+
+<img src="./assets/images/swipe-left.png" alt="golf-leaderboard4" class="swipe-left">
+
+</div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="4">
+
+<img src="./assets/images/4.jpg" alt="golf-leaderboard52">
+
+<div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="5">
+
+<img src="./assets/images/5.jpg" alt="golf-leaderboard6">
+
+
+<div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="6">
+
+<img src="./assets/images/6.jpg" alt="golf-leaderboard7">
+
+<div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="7">
+
+<img src="./assets/images/7.jpg" alt="golf-leaderboard8">
+
+<div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="8">
+
+<img src="./assets/images/8.jpg" alt="golf-leaderboard9">
+
+<div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="9">
+
+<img src="./assets/images/9.jpg" alt="golf-leaderboard10">
+
+<div class="infobox"><div class="info_dot"></div></div></div><div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="10">
+
+<img src="./assets/images/12.jpg" alt="golf-leaderboard11">
+
+</div><div class="xyinfobox slick-slide slick-cloned" style="width: 146px;" data-slick-index="11"><img src="./assets/images/event/0.jpg" alt="golf-event-details"><div class="infobox"><div class="info_dot"></div></div></div></div></div><button type="button" data-role="none" class="slick-prev" style="display: block;">Previous</button><button type="button" data-role="none" class="slick-next" style="display: block;">Next</button></div></div></div></div></div><style type="text/css"></style><div data-ng-class="{'text-slide-2' :showPhone===false}" class="text-slide"><div class="content-section-1 fadeOutUp">
+
+
+<div class="get-this-app" style="margin-top: 235px"><span class="ng-binding">Get this app</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div></div><div class="content-section-2 fadeInUp fadeOutUp"><div class="radius"><h2 class="hiw-slogan"><i class="fa fa-info-circle" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> Stay and Play</h2><span class="hiw-tilte ng-binding" ng-class="{active:show_desc}"><i class="fa fa-times-circle-o" ng-init="show_desc" ng-click="show_desc=!show_desc"></i>Quickly find all golf courses at the travel destination on map and conveniently book available hotels in one place. Golf Destination package lets you book &amp; play at many nearby golf courses. </span></div>
+
+<div class="get-this-app"><span class="ng-binding">Get this app</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div></div>
+
+<div class="content-section-4 fadeInUp fadeOutUp">
+
+<div class="radius">
+
+    <h2 class="hiw-slogan"><i class="fa fa-info-circle" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> Scorecard</h2>
+
+    <span class="hiw-tilte ng-binding" ng-class="{active:show_desc}"><i class="fa fa-times-circle-o" ng-init="show_desc" ng-click="show_desc=!show_desc"></i>Record your and your friends' scores during the round via the GolfConnect24 app. Or to capture the scores after the round to save it and view golf reports</span></div>
+
+
+    <div class="get-this-app"><span class="ng-binding">Get this app</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div></div>
+	
+	
+	<div class="content-section-3 fadeInUp fadeOutUp"><div class="radius"><h2 class="hiw-slogan ng-binding"><i class="fa fa-info-circle" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> Upcoming Events</h2><span class="hiw-tilte ng-binding" ng-class="{active:show_desc}"><i class="fa fa-times-circle-o" ng-init="show_desc" ng-click="show_desc=!show_desc"></i>Golfers can create their own personal golf events to either send invitation to their friends and/or to publish to the GolfConnect24 social network so other golfers can find and participate <br></span></div><div class="get-this-app"><span class="ng-binding">Get this app</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div></div><div class="content-section-5 fadeInUp fadeOutUp"><div class="radius"><h2 class="hiw-slogan ng-binding"><i class="fa fa-info-circle" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> Live Leaderboard</h2><span class="hiw-tilte ng-binding" ng-class="{active:show_desc}"><i class="fa fa-times-circle-o" ng-init="show_desc" ng-click="show_desc=!show_desc"></i> Real time leaderboard per hole for multiple group competition so golf is more competitive and exciting.</span></div><div class="get-this-app"><span class="ng-binding">Get this app</span> <a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><i class="fa fa-android"></i></a> <a href="https://itunes.apple.com/us/app/id963089620?mt=8"><i class="fa fa-apple"></i></a></div></div></div></div></section><div id="fullpage" style="display: block; height: 100%; position: relative; touch-action: none; transform: translate3d(0px, -3130px, 0px); transition: all 700ms ease 0s;" class="fullpage-wrapper"><div class="section fp-section fp-table" id="section-home" ng-init="showPhone=true" style="height: 150px; background-color: rgb(63, 182, 143);"><div class="fp-tableCell" style="height: 150px;"><div class="f_w-section f_w-home">
+	
+	<div class="download-app"><span class="home-download-title ng-binding">Get this app:</span><p class="home-download-store"><a href="https://play.google.com/store/apps/details?id=golfconnect24.com.ludiino"><img src="./assets/images/icon_playstore.png" class="download-android">Google Play</a></p><p class="home-download-store"><a href="https://itunes.apple.com/us/app/id963089620?mt=8"><img src="./assets/images/icon_applestore.png" class="download-ios">Apple Store</a></p></div></div></div></div><div class="section fp-section fp-table" id="section-playstay" style="height: 150px; background-color: rgb(143, 216, 155);"><div class="fp-tableCell" style="height: 150px;"><div class="display_screen"><div class="landscape"><div class="clouds"><img src="./assets/images/ps-cloud-1.png" alt="" class="ps-cloud-1"> <img src="./assets/images/ps-cloud-2.png" alt="" class="ps-cloud-2"></div><div class="ps-mobile"><img src="./assets/images/ps-phone.png" alt="" class="ps-phone"> <img src="./assets/images/ps-stars.png" alt="" class="ps-stars"> <img src="./assets/images/ps-location-1.png" alt="" class="ps-location-1"></div></div></div></div></div><div class="section fp-section fp-table" id="section-event" style="height: 150px; background-color: rgb(255, 195, 55);"><div class="fp-tableCell" style="height: 150px;"><div class="display_screen"><div class="landscape"><div class="clouds"><svg class="icon cloud-1"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-1"></use></svg> <svg class="icon cloud-2"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-2"></use></svg> <svg class="icon cloud-3"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-3"></use></svg></div><div class="even-trees"><img src="./assets/images/event-tree-1.png" alt="" class="even-tree-1"><img src="./assets/images/event-tree-2.png" alt="" class="even-tree-2"><img src="./assets/images/event-tree-3.png" alt="" class="even-tree-3"><img src="./assets/images/event-tree-4.png" alt="" class="even-tree-4"></div><div class="even-golfers"><img src="./assets/images/event-golfers.png" alt=""></div><div class="even-buggy"><img src="./assets/images/event-buggy.png" alt=""></div><div class="even-hole"><img src="./assets/images/event-hole.png" alt=""></div><div class="even-ground"></div></div></div></div></div><div class="section fp-section fp-table" id="section-scorecard" style="height: 150px; background-color: rgb(143, 216, 211);"><div class="fp-tableCell" style="height: 150px;"><div class="display_screen"><div class="landscape"><div class="clouds"><svg class="icon cloud-1"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-1"></use></svg> <svg class="icon cloud-2"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-2"></use></svg> <svg class="icon cloud-3"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-3"></use></svg></div><div class="buildings"><svg class="icon buildings-1"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#buildings-1"></use></svg> <svg class="icon cloud-1"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-1"></use></svg> <svg class="icon cloud-2"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#cloud-2"></use></svg></div><div class="trees"><img src="./assets/images/tree-1.svg" alt="" class="tree-1"><img src="./assets/images/tree-2.svg" alt="" class="tree-2"><div class="tree-3"><div class="side"></div></div><div class="tree-4"><div class="side"></div></div></div><div class="ground"></div><div class="holes"><img src="./assets/images/holes.svg" alt="" class="tree-2"></div><div class="caddy"><div class="caddy-body"><img src="./assets/images/caddy.svg" alt="" class="tree-2"></div><div class="wheels"><span></span> <span></span></div><div class="trails"><div class="mask"><span></span></div><div class="mask"><span></span></div><div class="mask"><span></span></div></div></div></div></div></div></div><div class="section fp-section fp-table" id="section-leaderboard" style="height: 150px; background-color: rgb(255, 195, 55);"><div class="fp-tableCell" style="height: 150px;"><div class="display_screen"></div></div></div><div class="section fp-section fp-table active" id="section-b2b" ng-init="playVideo" style="height: 150px; background-color: rgb(131, 209, 219);"><div class="fp-tableCell" style="height: 150px;"><div class="columns large-12 bg_b2b"><div class="wrapper"><div class="feature-tabs"><div class="clearfix"><div class="devices"><div class="tablet">
+
+<img src="./assets/images/ipad.png" alt="Tablet">
+
+<div class="mask"><ul class="screens" ng-class="{active:playVideox}">
+
+<li ng-class="{active:Tabb2b===1}" class="active">
+
+<div class="change_text_tablet slick-initialized slick-slider">
+
+<div class="slick-list draggable" tabindex="0">
+	
+	<div class="slick-track" style="opacity: 1; width: 2515px; transform: translate3d(-503px, 0px, 0px);">
+	
+	<img src="./assets/images/booking-web-3.jpg" alt="screen01" class="slick-slide slick-cloned" data-slick-index="-1" style="width: 503px;">
+	
+	<img src="./assets/images/booking-web-1.jpg" alt="screen01" class="slick-slide slick-active" data-slick-index="0" style="width: 503px;">
+	
+	<img src="./assets/images/booking-web-2.jpg" alt="screen01" class="slick-slide" data-slick-index="1" style="width: 503px;">
+	
+	<img src="./assets/images/booking-web-3.jpg" alt="screen01" class="slick-slide" data-slick-index="2" style="width: 503px;">
+	<img src="./assets/images/booking-web-1.jpg" alt="screen01" class="slick-slide slick-cloned" data-slick-index="3" style="width: 503px;">
+	
+	</div></div>  
+	
+	</div></li><li ng-class="{active:Tabb2b===2}"><img src="./assets/images/ads-web-1.jpg" alt="4b"></li>
+	<li ng-class="{active:Tabb2b===3}"><div class="change_text slick-initialized slick-slider"><div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 2515px; transform: translate3d(-503px, 0px, 0px);"><img src="./assets/images/report-golf-1.jpg" alt="screen01" class="slick-slide slick-cloned" data-slick-index="-1" style="width: 503px;"><img src="./assets/images/report-golf-3.jpg" alt="screen01" class="slick-slide slick-active" data-slick-index="0" style="width: 503px;"><img src="./assets/images/report-golf-2.jpg" alt="screen01" class="slick-slide" data-slick-index="1" style="width: 503px;"><img src="./assets/images/report-golf-1.jpg" alt="screen01" class="slick-slide" data-slick-index="2" style="width: 503px;"><img src="./assets/images/report-golf-3.jpg" alt="screen01" class="slick-slide slick-cloned" data-slick-index="3" style="width: 503px;"></div></div>  </div></li><li ng-class="{active:Tabb2b===4}"><div class="change_text slick-initialized slick-slider"><div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 2515px; transform: translate3d(-503px, 0px, 0px);"><img width="1223" height="917" src="./assets/images/report3.jpg" alt="screen01" class="slick-slide slick-cloned" data-slick-index="-1" style="width: 503px;"><img width="1223" height="917" src="./assets/images/report1.jpg" alt="screen01" class="slick-slide slick-active" data-slick-index="0" style="width: 503px;"><img width="1223" height="917" src="./assets/images/report2.jpg" alt="screen01" class="slick-slide" data-slick-index="1" style="width: 503px;"><img width="1223" height="917" src="./assets/images/report3.jpg" alt="screen01" class="slick-slide" data-slick-index="2" style="width: 503px;"><img width="1223" height="917" src="./assets/images/report1.jpg" alt="screen01" class="slick-slide slick-cloned" data-slick-index="3" style="width: 503px;"></div></div>  </div></li></ul></div></div></div><div class="tabs" ng-init="Tabb2bChange=1"><div class="block-heading hidden-when-stack"><h2><span ng-class="{active:Tabb2bChange===1}" ng-click="Tabb2bChange=1;Tabb2b=1" class="ng-binding active">Golf Courses</span> <span ng-class="{'active':Tabb2bChange===2}" ng-click="Tabb2bChange=2; Tabb2b=4" class="ng-binding"> Other Businesses</span></h2></div><div class="abcdef active" ng-class="{active:Tabb2bChange===1}"><ul class="nav-tabs"><li ng-class="{active:Tabb2b===1}" ng-click="Tabb2b=1" class="active"><a><i class="ecommer"></i></a></li><li ng-class="{active:Tabb2b===2}" ng-click="Tabb2b=2"><a><i class="marketing"></i></a></li><li ng-class="{active:Tabb2b===3}" ng-click="Tabb2b=3"><a><i class="fa fa-line-chart"></i></a></li></ul><div class="tab-content"><div class="tab-pane transition fade scale active" ng-class="{active:Tabb2b===1}"><h3 class="ng-binding">E-commerce for Golf</h3><p class="ng-binding">Golf Courses can easily create &amp; upload tee times for sales online. Tee Time booking status is immediately updated in real time and Booking Info is automatically sent to Golf Courses &amp; Golfer</p></div><div class="tab-pane transition fade scale" ng-class="{active:Tabb2b===2}"><h3 class="ng-binding">Event Advertising<br>&amp; Online Registration</h3><p style="text-align: left" class="ng-binding">Real time information about upcoming golf tournaments &amp; online registration via GolfConnect24 web &amp; app. Mobile push notifications about events are sent directly to golfer   </p></div><div class="tab-pane transition fade scale" ng-class="{active:Tabb2b===3}"><h3 class="ng-binding">Real Time Reporting Dashboard</h3><p style="text-align: left" class="ng-binding">Provides real time information on daily operation of golf courses. Important information is organized &amp; visually presented in chart &amp; graph</p></div></div></div><div class="defcba" ng-class="{active:Tabb2bChange===2}"><p style="padding: 30px;    text-align: left; color:#fff" class="ng-binding">We specialize in developing &amp; deploying E-commerce, Social Networks, and Business Intelligence solutions for businesses on Web &amp; Mobile. </p></div><div class="f_contact-us"><h2 class="ng-binding">Ready to bring E-commerce to Golf?</h2><a href="mailto:sales@golfconnect24.com" target="_blank" class="button btn_contact ng-binding">Contact Us!</a></div></div></div></div></div></div><div class="display_screen"><div class="landscape"><img src="./assets/images/bg-b2b.svg" alt="" class="bg-b2b"><div class="clouds"><svg class="icon cloud-1"><use xmlns:xlink="www.w3.org/1999/xlink" xlink:href="#cloud-1"></use></svg> <svg class="icon cloud-2"><use xmlns:xlink="www.w3.org/1999/xlink" xlink:href="#cloud-2"></use></svg> <svg class="icon cloud-3"><use xmlns:xlink="www.w3.org/1999/xlink" xlink:href="#cloud-3"></use></svg></div><div class="millhouse"><img src="./assets/images/millhouse.svg" alt=""><div class="swing"><img src="./assets/images/swing.svg" alt=""></div></div></div><div id="f_footer"><div class="warp-footer"><div class="large-12 columns"><div class="small-6 medium-4 columns"><div itemprop="name" class="fbody-head ng-binding">Ludiino Company Limited</div><div class="fbody-content"><ul class="our-links"><li class="ft-link-desc" style="color: #fff;font-size: 13px;font-weight: bold"><a itemprop="telephone" class="ft-hotline ng-binding" href="https://golfconnect24.com">Address: 8A Pham Dinh Toai, Ward 6,  District 3, HCMC.(+84)837 734607 <span style="display:block" class="ng-binding">Business Registration ID: 0312861276 on 18/07/2014 granted by Department of Planning and Investment of Ho Chi Minh city .</span></a></li></ul></div></div><div class="small-6 medium-4 columns"><a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=18609"><img alt="" src="https://s3-ap-southeast-1.amazonaws.com/media.golfconnect24.com/Golfconnect24/assets/7APPSgItjc20IIl6Q%3D%3D.jpgx" style="margin-left: calc(50% - 75px)"></a></div><div class="small-6 medium-4 columns" style="padding-left: 10%; text-decoration: underline"><div class="fbody-content"><ul class="our-links" style="font-weight: bold"><li><a class="ft-link-desc ng-binding" href="http://media.golfconnect24.com/Golfconnect24/files/Quy+ch%E1%BA%BF+s%C3%A0n.docx" title="Terms of Service">Terms of Service</a></li><li><a class="ft-link-desc ng-binding" href="http://media.golfconnect24.com/Golfconnect24/files/Ch%C3%ADnh+s%C3%A1ch+b%E1%BA%A3o+m%E1%BA%ADt+th%C3%B4ng+tin.docx" title="Điều khoản &amp; Quy chế">Privacy Policies</a></li><li><a class="ft-link-desc ng-binding" href="//media.golfconnect24.com/Golfconnect24/files/C%C6%A1+ch%E1%BA%BF+gi%E1%BA%A3i+quy%E1%BA%BFt+tranh+ch%E1%BA%A5p.docx" title="Cơ chế giải quyết tranh chấp">Disputes</a></li></ul></div></div></div></div></div></div></div></div></div></div><script type="text/javascript" class="ng-scope">window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="//v2.zopim.com/?3RkR88FoKZwj5Tbx65JOCnnXDC69F2O8";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");</script>
+
+
+
+
+  <script type="text/javascript" class="ng-scope">$("#date-picker-searchteetime").on('click', function () {
+            var datePicker = $('#date-picker-searchteetime').data("kendoDatePicker");
+            if ($('#date-picker-searchteetime_dateview').css('display') == 'none') {
+                datePicker.open();
+            } else {
+                datePicker.close();
+            }
+        });</script>
+
+
+  <script type="text/ng-template" id="youtube-dig" class="ng-scope">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZyDHhVIdXpI?rel=0&autoplay=1" frameborder="0" allowfullscreen ></iframe>
+
+
+    </script><script type="text/javascript" class="ng-scope">var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+     
+	var LoadVideo = function(player_id){
+    console.log("load video:  "+player_id);
+    var Program = {
+    
+        Init: function(){
+            this.NewPlayer();
+            this.EventHandler();
+        },
+
+        NewPlayer: function(){
+            var _this = this;
+            this.Player = new YT.Player(player_id, {});
+            _this.Player.$element = $('#' + player_id);
+        },
+
+        Play: function(){
+        	if( this.Player.getPlayerState() === 1 ) return;
+            this.Player.playVideo();
+        },
+
+        Pause: function(){
+        	if( this.Player.getPlayerState() === 2 ) return;
+            this.Player.pauseVideo();
+        },
+
+        ScrollControl: function(){
+        	if( Utils.IsElementInViewport(this.Player.$element[0])>0 ) 
+        		{
+        			this.Play();
+        			console.log("PLAY");
+        		}else{
+        			this.Pause();
+        			console.log("PAUSE");
+        		} 
+        },
+
+        EventHandler: function(){
+
+            var _this = this;
+            $(window).bind('mousewheel ', function(event){
+            	console.log("call EventHandler");
+            	setTimeout(function(){
+				  _this.ScrollControl();
+				}, 2000);
+                
+            });
+        }
+        
+    };
+    
+    var Utils = {
+    
+        /** @author http://stackoverflow.com/a/7557433/1684970 */
+        IsElementInViewport: function(el){
+        	console.log(el);
+            if (typeof jQuery === "function" && el instanceof jQuery) el = el[0];
+            var rect = el.getBoundingClientRect();
+            console.log(rect.top +" == "+rect.left+" == "+rect.bottom+" == "+rect.right);
+            return rect.top ;
+        }
+        
+    };
+    
+    return Program.Init();
+
+};
+
+
+window.onload = function(e){ 
+     LoadVideo('playerA');
+	 LoadVideo('playerB');
+}</script>
+
+</div>
+    <div>
+        <!-- compiled JavaScript -->
+			<script type="text/javascript" src="./assets/js/jquery/jquery.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular-ui-router.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular-animate.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/mm-foundation-tpls.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/aws-sdk.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/restangular.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/lodash.min.js"></script>
+			<script type="text/javascript" src="./assets/js/angular/ngStorage.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/cookies.min.js"></script>
+            <script type="text/javascript" src="./assets/js/jquery/jquery.flot.min.js"></script>
+			<script type="text/javascript" src="./assets/js/angular/angular-flot.min.js"></script>
+			<script type="text/javascript" src="./assets/js/jquery/jquery.flot.symbol.min.js"></script>
+            
+			<script type="text/javascript" src="./assets/js/other/toastr.min.js"></script>
+			
+            <script type="text/javascript" src="./assets/js/angular/angular-sanitize.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular-file-upload.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular-block-ui.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular-youtube-embed.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/kendo.custom.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/kendo.all.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular-kendo.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angucomplete.js"></script>
+            <script type="text/javascript" src="./assets/js/other/jszip.js"></script>
+            <script type="text/javascript" src="./assets/js/other/xlsx.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/ng-tags-input.min.js"></script>
+            
+            <script type="text/javascript" src="./assets/js/angular/angular-facebook.js"></script>
+            <script type="text/javascript" src="./assets/js/other/greensock.js"></script>
+            
+            <script type="text/javascript" src="./assets/js/other/layerslider.transitions.js"></script>
+            
+            <script type="text/javascript" src="./assets/js/jquery/layerslider.kreaturamedia.jquery.js"></script>
+            <script type="text/javascript" src="./assets/js/other/slick.min.js"></script>
+            
+            <script type="text/javascript" src="./assets/js/angular/slick.min.js"></script>
+            <script type="text/javascript" src="./assets/js/jquery/jquery-ui.min.js"></script>
+            <script type="text/javascript" src="./assets/js/jquery/jquery.ui.touch-punch.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/ngDialog.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/sockjs.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/pagination.js"></script>
+            <script type="text/javascript" src="./assets/js/jquery/jquery.countdownTimer.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/ui-grid.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/moment-with-locales.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/Chart.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular-chart.min.js"></script>
+            <script type="text/javascript" src="./assets/js/jquery/jquery.nice-select.js"></script>
+            <script type="text/javascript" src="./assets/js/other/ng-map.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/bindonce.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/moment-range.min.js"></script>
+            <script type="text/javascript" src="./assets/js/other/ta-date-range-picker.js"></script>
+            <script type="text/javascript" src="./assets/js/other/flickity.pkgd.js"></script>
+            <script type="text/javascript" src="./assets/js/other/highcharts.src.js"></script>
+            <script type="text/javascript" src="./assets/js/other/exporting.js"></script>
+            <script type="text/javascript" src="./assets/js/other/dark-unica.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/rzslider.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular-busy.min.js"></script>
+            <script type="text/javascript" src="./assets/js/angular/angular-filter.min.js"></script>
+            <script type="text/javascript" src="./assets/js/main/main.js"></script>
+            
+    </div>
+
+
+
+<div block-ui="main" class="ng-scope block-ui"><div ng-show="state.blockCount > 0" class="block-ui-overlay ng-hide" ng-class="{ 'block-ui-visible': state.blocking }"></div> <div ng-show="state.blocking" class="block-ui-message-container ng-hide"> <img style="position:absolute;top:50%;left:50%;width:42px;height:42px;z-index:1200;margin-top:-10px;margin-left:-10px" src="./assets/images/ajax-loader.gif"></div></div><div aria-hidden="true" class="k-calendar-container k-popup k-group k-reset" id="date-picker-searchteetime_dateview" data-role="popup" style="display: none; position: absolute;"></div><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="display: none; position: absolute;"><ul unselectable="on" class="k-list k-reset" tabindex="-1" role="listbox" aria-hidden="true" aria-live="off" style="overflow: auto;"></ul></div><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="position: absolute; height: auto; display: none;"><ul unselectable="on" class="k-list k-reset" tabindex="-1" role="listbox" aria-hidden="true" aria-live="off" style="overflow: auto;"><li tabindex="-1" role="option" unselectable="on" class="k-item k-state-selected k-state-focused ng-scope">All</li></ul></div><div id="fp-nav" class="left" style="margin-top: -195.5px;"><ul><li><a href="#" class=""><span></span></a><div class="fp-tooltip left">Online Booking</div></li><li><a href="#" class=""><span></span></a><div class="fp-tooltip left">Stay and Play</div></li><li><a href="#" class=""><span></span></a><div class="fp-tooltip left">Events</div></li><li><a href="#" class=""><span></span></a><div class="fp-tooltip left">Scorecard</div></li><li><a href="#" class=""><span></span></a><div class="fp-tooltip left">Live Leaderboard</div></li><li><a href="#" class="active"><span></span></a><div class="fp-tooltip left">For Golf Course</div></li></ul></div>
+
+
+</body>
+
+</html>
