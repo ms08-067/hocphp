@@ -3,89 +3,373 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
+
 <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/lib.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
-<header>
+<div class="wrapper">
+  
+  <header>
   
   <div class="header-top clearfix">
-    <h1 class="l-left"><a href="#firstSection"><img src="./assets/images/logo_homepage.png" /></a></h1>
+    
+    <h1 class="l-left">
+      <a href="">
+          <img src="./assets/images/logo_homepage.png" />
+      </a>
+    </h1>
+
     <a class="l-right toggle-menu" href="#">
       <i></i>
       <i></i>
       <i></i>
     </a>
+
+    <div class="wrap-menu">
+    
+    <ul class="menu">
+        <li data-menuanchor="firstSection">
+          <a href="#firstSection">Giới Thiệu</a>
+        </li>
+        <li data-menuanchor="secondSection">
+          <a href="#secondSection">Đặt Sân</a>
+        </li>
+        <li data-menuanchor="thirdSection">
+          <a href="#thirdSection">Stay & Play </a>
+        </li>
+        <li data-menuanchor="fourthSection">
+          <a href="#fourthSection">Sự Kiện</a>
+        </li>
+        <li data-menuanchor="fifthSection">
+          <a href="#fifthSection">Gallery</a>
+        </li>
+        <li>
+          <a href="#fifthSection/1">Đăng Nhập</a>
+        </li>
+    </ul>
+
+  </div>
   </div>
 
-  <nav class="hide">
+  <<!-- nav class="hide">
     <ul id="menu">
       <li data-menuanchor="firstSection">
-        <a href="#firstSection" title="First Section">First Section</a>
+        <a href="#firstSection" title="First Section">Giới Thiệu</a>
       </li>
       <li data-menuanchor="secondSection">
-        <a href="#secondSection" title="Second Section">Second Section</a>
+        <a href="#secondSection" title="Second Section">Đặt Sân</a>
       </li>
       <li data-menuanchor="thirdSection">
-        <a href="#thirdSection" title="Second Section">Third Section</a>
+        <a href="#thirdSection" title="Second Section">Stay & Play </a>
       </li>
       <li data-menuanchor="fourthSection">
-        <a href="#fourthSection" title="Fourth Section">Fourth Section</a>
+        <a href="#fourthSection" title="Fourth Section">Sự Kiện</a>
       </li>
       <li data-menuanchor="fifthSection">
-        <a href="#fifthSection" title="First Slide">First Slide</a>
+        <a href="#fifthSection" title="First Slide">Gallery</a>
       </li>
       <li data-menuanchor="fifthSection/1">
-        <a href="#fifthSection/1" title="Second Slide">Second Slide</a>
+        <a href="#fifthSection/1" title="Second Slide">Đăng Nhập</a>
       </li>
-    </ul>
+    </ul> -->
   </nav>
+
 </header>
 
-<div class="wrapper">
-  
-  <section class="home">
-    <h2>fullPage.js</h2>
-    <h3>This is the first section</h3>
-    <div class="scroll-icon">
-      <p>Jump into the last slide</p>
-      <a href="#fifthSection/1" class="icon-up-open-big"></a>
+  <section class="home fullpage">
+    <div class="wrap-mobile">
+        <div class="iphone-containerf">
+          <img src="./assets/images/iphonewhite.png" alt="golfbooking-iphone" class="iphone">
+    <div class="mask">
+        <ul class="screens">
+            <li ng-class="{active:Tabb2b===1}" class="active">
+                <div class="change_text_mobile slick-initialized slick-slider">
+                    <div class="slick-list draggable" tabindex="0">
+                        <div class="slick-track" style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px); transition: transform 500ms ease 0s;"><img src="./assets/images/booking-app-3.jpg" alt="golfbooking-iphone3" class="slick-slide slick-cloned" data-slick-index="-1" style="width: 0px;"><img src="./assets/images/booking-app-1.jpg" alt="golfbooking-iphone1" class="slick-slide" data-slick-index="0" style="width: 0px;"><img src="./assets/images/booking-app-2.jpg" alt="golfbooking-iphone2" class="slick-slide slick-active" data-slick-index="1" style="width: 0px;"><img src="./assets/images/booking-app-3.jpg" alt="golfbooking-iphone3" class="slick-slide" data-slick-index="2" style="width: 0px;"><img src="./assets/images/booking-app-1.jpg" alt="golfbooking-iphone1" class="slick-slide slick-cloned" data-slick-index="3" style="width: 0px;"></div>
+                    </div>
+                </div>
+            </li>
+            <li ng-class="{active:Tabb2b===2}"><img width="473" height="858" src="./assets/images/ads-1.jpg" alt="golfbooking-tablet1"></li>
+        </ul>
     </div>
+    <div class="holder-bg">
+        <div class="background-booking">
+            <div class="bg_iphone_1">
+                <div class="row">
+                    <div class="booking-tilte ng-binding"></div>
+                    <div class="field-option"><span class="k-widget k-datepicker k-header ng-pristine ng-untouched ng-valid" style=""><span class="k-picker-wrap k-state-default"><input kendo-date-picker="" id="date-picker-searchteetime" onkeydown="return false;" ng-model="vm.teeTimeObj.display_date" k-options="vm.datepPickerOpt" k-ng-model="vm.teeTimeObj.date" class="ng-pristine ng-untouched ng-valid k-input" data-role="datepicker" type="text" role="combobox" aria-expanded="false" aria-owns="date-picker-searchteetime_dateview" aria-disabled="false" aria-readonly="false" style="width: 100%;"><span unselectable="on" class="k-select" role="button" aria-controls="date-picker-searchteetime_dateview"><span unselectable="on" class="k-icon k-i-calendar">select</span></span>
+                        </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="booking-tilte ng-binding"></div><span class="tee-time-from-home ng-binding" ng-bind="vm.teeTimeObj.from_time_label">5:30</span> <span class="tee-time-to-home ng-binding" ng-bind="vm.teeTimeObj.to_time_label">16:00</span>
+                    <div class="field-option-time ng-isolate-scope ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" gf-dual-slider-home="" from-date-label="vm.teeTimeObj.from_time_label" to-date-label="vm.teeTimeObj.to_time_label" from-date="vm.teeTimeObj.from_time" to-date="vm.teeTimeObj.to_time" min="330" max="960" step="30">
+                        <div class="sliders_step1">
+                            <div id="slider-range"></div>
+                        </div>
+                        <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 100%;"></span></div>
+                </div>
+                <div class="row">
+                    <div class="booking-tilte ng-binding"></div>
+                    <div class="field-option"><span class="k-widget k-dropdown k-header ng-pristine ng-untouched ng-valid" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-readonly="false" aria-busy="false" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input ng-scope">All</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span>
+                        </span>
+                        <select kendo-drop-down-list="" k-data-text-field="'name'" k-data-value-field="'id'" ng-model="vm.teeTimeObj.city" ng-change="vm.getCourseByCity(vm.teeTimeObj.city)" k-data-source="vm.searchForm.city" class="ng-pristine ng-untouched ng-valid" data-role="dropdownlist" style="display: none;">
+                            <option value="-1" selected="selected">All</option>
+                            <option value="17">Đà Nẵng</option>
+                            <option value="3">Hà Nội</option>
+                            <option value="31">Bình Định</option>
+                            <option value="16">Quảng Nam</option>
+                            <option value="1">Hồ Chí Minh</option>
+                            <option value="7">Đà Lạt</option>
+                            <option value="15">Thừa Thiên Huế</option>
+                            <option value="11">Hải Dương</option>
+                            <option value="14">Nghệ An</option>
+                            <option value="57">Thanh Hóa</option>
+                            <option value="12">Bà Rịa-Vũng Tàu</option>
+                            <option value="6">Nha Trang</option>
+                            <option value="5">Đồng Nai</option>
+                            <option value="4">Bình Dương</option>
+                            <option value="8">Phan Thiết</option>
+                        </select>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="booking-tilte ng-binding"></div>
+                    <div class="field-option" id="golf-course-searchteetime"><span class="k-widget k-dropdown k-header ng-pristine ng-untouched ng-valid" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-readonly="false" aria-busy="false" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input ng-scope">All</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span>
+                        </span>
+                        <select kendo-drop-down-list="" k-data-text-field="'name'" k-data-value-field="'id'" ng-model="vm.teeTimeObj.golfcourse" k-data-source="vm.searchForm.golfcourse" class="ng-pristine ng-untouched ng-valid" data-role="dropdownlist" style="display: none;">
+                            <option value="-1" selected="selected">All</option>
+                            <option value="1970">Ba Na Hill</option>
+                            <option value="42">Chi Linh</option>
+                            <option value="46">Cua Lo</option>
+                            <option value="31">Dalat Palace</option>
+                            <option value="21">Diamond Bay</option>
+                            <option value="52">Dong Nai</option>
+                            <option value="1971">FLC Quy Nhon</option>
+                            <option value="1972">FLC Samson</option>
+                            <option value="35">King’s Island</option>
+                            <option value="47">Laguna Lang Co</option>
+                            <option value="25">Long Thanh</option>
+                            <option value="48">Montgomerie Links</option>
+                            <option value="63">Mekong</option>
+                            <option value="56">Sacom</option>
+                            <option value="49">Sea Links</option>
+                            <option value="23">Song Be</option>
+                            <option value="62">Ho Tram Strip</option>
+                            <option value="27">Thu Duc</option>
+                        </select>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="cursor:pointer" ng-click="vm.gotoSelectPage()" class="field-option radius ng-binding"></div>
+                </div>
+                <div class="infobox">
+                    <div class="info_dot"></div>
+                </div>
+            </div>
+            <div class="bg_iphone_2">
+                <div class="slides slick-initialized slick-slider">
+                    <div class="slick-list draggable" tabindex="0">
+                        <div class="slick-track" style="opacity: 1; width: 2628px; transform: translate3d(-2482px, 0px, 0px); transition: transform 500ms ease 0s;">
+                            <div class="xyinfobox slick-slide slick-cloned" style="width: 146px;" data-slick-index="-1"><img src="./assets/images/escore-card/14.jpg" alt="golfescore15"></div>
+                            <div class="xyinfobox slick-slide slick-active" style="width: 146px;" data-slick-index="0"><img src="./assets/images/event/0.jpg" alt="golfevent">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="1"><img src="./assets/images/escore-card/2.jpg" alt="golfescore">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="2"><img src="./assets/images/escore-card/4.jpg" alt="golfescore2">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="3"><img src="./assets/images/escore-card/3.jpg" alt="golfescore3">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="4"><img src="./assets/images/escore-card/3.1.jpg" alt="golfescore4">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="5"><img src="./assets/images/escore-card/5.jpg" alt="golfescore5">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="6"><img src="./assets/images/escore-card/6.jpg" alt="golfescore6">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="7"><img src="./assets/images/escore-card/7.jpg" alt="golfescore7">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="8"><img src="./assets/images/escore-card/7.1.jpg" alt="golfescore8">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="9"><img src="./assets/images/escore-card/8.jpg" alt="golfescore93">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="10"><img src="./assets/images/escore-card/9.jpg" alt="golfescore10">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="11"><img src="./assets/images/escore-card/10.jpg" alt="golfescore11">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="12"><img src="./assets/images/escore-card/11.jpg" alt="golfescore12">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="13"><img src="./assets/images/escore-card/12.jpg" alt="golfescore13">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="14"><img src="./assets/images/escore-card/13.jpg" alt="golfescore14">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="15"><img src="./assets/images/escore-card/14.jpg" alt="golfescore15"></div>
+                            <div class="xyinfobox slick-slide slick-cloned" style="width: 146px;" data-slick-index="16"><img src="./assets/images/event/0.jpg" alt="golfevent">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-role="none" class="slick-prev" style="display: block;">Previous</button>
+                    <button type="button" data-role="none" class="slick-next" style="display: block;">Next</button>
+                </div>
+            </div>
+            <div class="bg_iphone_ps">
+                <div class="slides slick-initialized slick-slider">
+                    <div class="slick-list draggable" tabindex="0">
+                        <div class="slick-track" style="opacity: 1; width: 146px; transform: translate3d(0px, 0px, 0px);">
+                            <div class="xyinfobox slick-slide slick-active" style="width: 146px;" data-slick-index="0"><img src="./assets/images/details.png" alt="golf-playstay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg_iphone_4">
+                <div class="slides slick-initialized slick-slider">
+                    <div class="slick-list draggable" tabindex="0">
+                        <div class="slick-track" style="opacity: 1; width: 1898px; transform: translate3d(-876px, 0px, 0px); transition: transform 500ms ease 0s;">
+                            <div class="xyinfobox slick-slide slick-cloned" style="width: 146px;" data-slick-index="-1"><img src="./assets/images/guide/12.jpg" alt="golf-leaderboard11"></div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="0"><img src="./assets/images/event/0.jpg" alt="golf-event-details">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="1"><img src="./assets/images/guide/1.jpg" alt="golf-leaderboard">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="2"><img src="./assets/images/guide/2.jpg" alt="golf-leaderboard2">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="3"><img src="./assets/images/guide/3.jpg" alt="golf-leaderboard3">
+                                <div class="infobox"><img src="./assets/images/swipe-left.png" alt="golf-leaderboard4" class="swipe-left"></div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="4"><img src="./assets/images/guide/4.jpg" alt="golf-leaderboard52">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide slick-active" style="width: 146px;" data-slick-index="5"><img src="./assets/images/guide/5.jpg" alt="golf-leaderboard6">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="6"><img src="./assets/images/guide/6.jpg" alt="golf-leaderboard7">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="7"><img src="./assets/images/guide/7.jpg" alt="golf-leaderboard8">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="8"><img src="./assets/images/guide/8.jpg" alt="golf-leaderboard9">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="9"><img src="./assets/images/guide/9.jpg" alt="golf-leaderboard10">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                            <div class="xyinfobox slick-slide" style="width: 146px;" data-slick-index="10"><img src="./assets/images/guide/12.jpg" alt="golf-leaderboard11"></div>
+                            <div class="xyinfobox slick-slide slick-cloned" style="width: 146px;" data-slick-index="11"><img src="./assets/images/event/0.jpg" alt="golf-event-details">
+                                <div class="infobox">
+                                    <div class="info_dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-role="none" class="slick-prev" style="display: block;">Previous</button>
+                    <button type="button" data-role="none" class="slick-next" style="display: block;">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <h3>This is the first section</h3>
   </section>
 
-  <section class="vertical-scrolling">
-    <h2>fullPage.js</h2>
+  <section class="second fullpage">
     <h3>This is the second section</h3>
   </section>
 
-  <section class="vertical-scrolling">
-    <h2>fullPage.js</h2>
+  <section  class="third fullpage">
     <h3>This is the third section</h3>
   </section>
 
-  <section class="vertical-scrolling">
-    <h2>fullPage.js</h2> 
+  <section  class="fourth fullpage">
     <h3>This is the fourth section</h3>
   </section>
 
-  <section class="vertical-scrolling">
-    <div class="horizontal-scrolling">
-      <h2>fullPage.js</h2>
-      <h3>This is the fifth section and it contains the first slide (actually section == first slide)</h3>
-    </div>
-    <div class="horizontal-scrolling">
-      <h2>fullPage.js</h2>
-      <h3>This is the second slide</h3> 
-      <p class="end">Thank you!</p>
-    </div>
-  </section>
-
-
+  <!-- <section class="vertical-scrolling">
+    
+    <h3>This is the fourth section</h3>
+  </section> -->
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.js"></script> -->
+<script src="./assets/js/jquery/jquery.fullPage.js"></script>
+
 <script type="text/javascript" src="assets/js/main/main.js"></script>
 </body>
 </html>

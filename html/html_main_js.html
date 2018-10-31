@@ -1,50 +1,3 @@
-<style type="text/css">
-    .k-picker-wrap input[type="text"]:focus {
-        \n\tbackground-color: #40A4C8!important;
-        \n\tcolor: #fff!important;
-        \n
-    }
-    
-    \n.custom-width-800 .ngdialog-content {
-        \n\twidth: 597px!important;
-        \n height: 350px;
-        \n -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.53);
-        \n box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.53);
-        \n
-    }
-    
-    \n.custom-width-800 .ngdialog-content .ngdialog-close {
-        \n\tright: -7px!important;
-        \n\ttop: -5px;
-        \n
-    }
-    
-    \n.new-cover img {
-        \n\t width: 50px;
-        \n position: absolute;
-        \n top: -11px;
-        \n left: 110px;
-        \n
-    }
-    
-    \n.new-text {
-        \n\tbackground: #e81d62;
-        \n border: medium none;
-        \n color: #FFF;
-        \n float: left;
-        \n font-weight: normal;
-        \n font-size: 9px;
-        \n line-height: 8px;
-        \n padding: 4px;
-        \n text-transform: none;
-        \n -webkit-transition: all, 0.2s, ease-in-out;
-        \n -o-transition: all, 0.2s, ease-in-out;
-        \n transition: all, 0.2s, ease-in-out;
-        \n font-weight: normal;
-        \n font-style: normal;
-        \n
-    }
-</style>
 <div id="greet-ui" ng-init="Tabb2b=1" ng-init="Tabb2bChange" ng-init="showPhone">
     <div class="svg-paths-container">
         <svg xmlns="http://ww.w3.org/2000/svg">
@@ -134,7 +87,7 @@
                                     <li ng-show="islogout" class="usermenuLogin"><a href="#login" class="user-popup-link inited">{{translation.Common.Login}}</a></li>
                                 </ul>
                             </li>
-                            <li class="blog-menu">Gallery<a href="" ng-if="lang===\'en\'">Gallery</a> <a href="http://blog.golfconnect24.com/tag/vn/" ng-if="lang===\'vi\'">Gallery</a></li>
+                            <li class="blog-menu"><a href="" ng-if="lang===\'en\'">Gallery</a> <a href="http://blog.golfconnect24.com/tag/vn/" ng-if="lang===\'vi\'">Gallery</a></li>
                             <li><a href="#/coming-event">Sự kiện</a></li>
                             <li><a href="#/play_stay">Stay &amp; Play</a></li>
                             <li class="booking-menu"><a ng-click="vm.gotoSelectPage()">Đặt Sấn</a></li>
@@ -593,7 +546,7 @@
                                 </div>
                             </div>
                             <div class="small-6 medium-4 columns">
-                                <a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=18609"><img alt="" src="https://s3-ap-southeast-1.amazonaws.com/media.golfconnect24.com/Golfconnect24/assets/7APPSgItjc20IIl6Q%3D%3D.jpgx" style="margin-left: calc(50% - 75px)"></a>
+                                
                             </div>
                             <div class="small-6 medium-4 columns" style="padding-left: 10%; text-decoration: underline">
                                 <div class="fbody-content">
@@ -611,22 +564,3 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    window.$zopim || (function(d, s) {
-        var z = $zopim = function(c) {
-                z._.push(c)
-            },
-            $ = z.s = \nd.createElement(s),
-            e = d.getElementsByTagName(s)[0];
-        z.set = function(o) {
-            z.set.\n_.push(o)
-        };
-        z._ = [];
-        z.set._ = [];
-        $.async = !0;
-        $.setAttribute("charset", "utf-8");\
-        n$.src = "//v2.zopim.com/?3RkR88FoKZwj5Tbx65JOCnnXDC69F2O8";
-        z.t = +new Date;
-        $.\ntype = "text/javascript";
-        e.parentNode.insertBefore($, e)
-    })(document, "script"); < \/script><script>(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(window,document,\'script\',\'/ / www.google - analytics.com / analytics.js\ ',\'ga\');\n\n  ga(\'create\', \'UA-56059434-1\', \'auto\');\n  ga(\'send\', \'pageview\');<\/script><script type="text/javascript">$("#date-picker-searchteetime").on(\'click\', function () {\n            var datePicker = $(\'#date-picker-searchteetime\').data("kendoDatePicker");\n            if ($(\'#date-picker-searchteetime_dateview\').css(\'display\') == \'none\') {\n                datePicker.open();\n            } else {\n                datePicker.close();\n            }\n        });<\/script><script type="text/ng-template" id="youtube-dig"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZyDHhVIdXpI?rel=0&autoplay=1" frameborder="0" allowfullscreen ></iframe><\/script><script type="text/javascript">var tag = document.createElement(\'script\');\n      tag.src = "https://www.youtube.com/player_api";\n      var firstScriptTag = document.getElementsByTagName(\'script\')[0];\n      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n     \n\tvar LoadVideo = function(player_id){\n    console.log("load video:  "+player_id);\n    var Program = {\n    \n        Init: function(){\n            this.NewPlayer();\n            this.EventHandler();\n        },\n\n        NewPlayer: function(){\n            var _this = this;\n            this.Player = new YT.Player(player_id, {});\n            _this.Player.$element = $(\'#\' + player_id);\n        },\n\n        Play: function(){\n        \tif( this.Player.getPlayerState() === 1 ) return;\n            this.Player.playVideo();\n        },\n\n        Pause: function(){\n        \tif( this.Player.getPlayerState() === 2 ) return;\n            this.Player.pauseVideo();\n        },\n\n        ScrollControl: function(){\n        \tif( Utils.IsElementInViewport(this.Player.$element[0])>0 ) \n        \t\t{\n        \t\t\tthis.Play();\n        \t\t\tconsole.log("PLAY");\n        \t\t}else{\n        \t\t\tthis.Pause();\n        \t\t\tconsole.log("PAUSE");\n        \t\t} \n        },\n\n        EventHandler: function(){\n\n            var _this = this;\n            $(window).bind(\'mousewheel \', function(event){\n            \tconsole.log("call EventHandler");\n            \tsetTimeout(function(){\n\t\t\t\t  _this.ScrollControl();\n\t\t\t\t}, 2000);\n                \n            });\n        }\n        \n    };\n    \n    var Utils = {\n    \n        /** @author http://stackoverflow.com/a/7557433/1684970 */\n        IsElementInViewport: function(el){\n        \tconsole.log(el);\n            if (typeof jQuery === "function" && el instanceof jQuery) el = el[0];\n            var rect = el.getBoundingClientRect();\n            console.log(rect.top +" == "+rect.left+" == "+rect.bottom+" == "+rect.right);\n            return rect.top ;\n        }\n        \n    };\n    \n    return Program.Init();\n\n};\n\n\nwindow.onload = function(e){ \n     LoadVideo(\'playerA\');\n\t LoadVideo(\'playerB\');\n}<\/script>
