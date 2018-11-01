@@ -16,6 +16,35 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: UTM_Neo_Sans_Intel;
+    src: url('../fonts/UTM_Neo_Sans_Intel.ttf');
+}
+@font-face {
+    font-family: UTM_Neo_Sans_Intel_Italic;
+    src: url('../fonts/UTM_Neo_Sans_Intel_Italic.ttf');
+}
+@font-face {
+    font-family: UTM_Neo_Sans_IntelBold;
+    src: url('../fonts/UTM_Neo_Sans_IntelBold.ttf');
+}
+@font-face {
+    font-family: UTM_Neo_Sans_IntelBold_Italic;
+    src: url('../fonts/UTM_Neo_Sans_IntelBold_Italic.ttf');
+}
+body {
+    background: #fff;
+    color: #222;
+    padding: 0;
+    margin: 0;
+    font-family: UTM_Neo_Sans_Intel, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    position: relative;
+    cursor: default;
+}
+
 [class^="icon-"]:after,
 [class*=" icon-"]:after {
   font-family: "untitled-font-1";
@@ -129,8 +158,9 @@ ul, li {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .header-top {
-	background: rgba(0, 47, 77, .3);
-	height: 70px;
+	background: #fff;
+	opacity: 0.7;
+	height: 60px;
 	padding: 0 10px;
 	position: fixed;
 	top: 0;
@@ -347,9 +377,11 @@ h3 {
 		padding: 3px;
 	}
 }
+
 .home {
 	background: url("../images/bg_home.png") !important;
 	background-position: center -260px !important;
+	/*background-repeat: repeat-y;*/
 	/*min-height: 600px;*/
 	background-size: cover;
 }
@@ -361,7 +393,7 @@ h3 {
 }
 
 .third {
-	background: url("../images/bg_second.png") !important;
+	background: url("../images/bg_third.png") !important;
 	background-position: center -560px !important;
 	background-size: 100%;	
 }
@@ -372,19 +404,77 @@ h3 {
 }
 .menu li {
 	display: inline-block;
-    padding: 18px 16px;
+    padding: 2px 16px;
     font-size: 12px;
 }
 .wrap-menu {
-	background: #ccc;
     width: 682px;
     float: right;
 }
+.wrap-menu ul.menu {
+	margin-top: 18px;
+}
+
+.wrap-menu ul.menu li a {
+	color: #20428d;
+	text-transform: none;
+	font-family: UTM_Neo_Sans_Intel;
+}
+
 .wrap-mobile {
-	
-	width: 300px;
-	height: 400px;
+	width: 185px;
+    height: 290px;
 	left: 300px;
 	top: 90px;
 	position: absolute;
+}
+
+.box-img-sk {
+	width: 460px;
+	left: 200px;
+	top: 90px;
+	position: absolute;
+}
+
+.heading-section {
+	color: #fff;
+    font-style: normal;
+    text-transform: none;
+    width: 328px;
+    float: right;
+    position: absolute;
+    right: 272px;
+    top: 90px;
+    font-size: 26px;
+    font-family: UTM_Neo_Sans_Intel;
+}
+
+.down-app {
+    font-size: 12px;
+    text-transform: none;
+    background: #fff;
+    width: 152px;
+    color: #0076a3;
+    margin-top: 3px;
+    margin-left: 30px;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 20px;
+    opacity: 0.6;
+}
+
+.down-app img {
+	width: 20px;
+}
+
+.logo {
+    text-align: center;
+    padding: 1% 1% 3% 1%;
+    width: 240px;
+    margin-top: -10px;
+    margin-left: 44px;
+}
+.{
+	animation: cloudfly 20s linear infinite;
 }

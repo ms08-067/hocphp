@@ -24,7 +24,21 @@ $('.wrapper').fullpage({
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
-    $header_top.css('background', 'rgba(0, 47, 77, .3)');
+    if (index == 1) {
+      $header_top.css('background', 'rgba(244, 247, 247, .7)');
+    }
+    if (index == 2) {
+      $header_top.css('background', 'rgba(201, 240, 242, .9)');
+    }
+    if (index == 3) {
+      $header_top.css('background', 'rgba(201, 240, 242, .9)');
+    }
+    if (index == 4) {
+      $header_top.css('background', 'rgba(240, 231, 222, .9)');
+    }
+    if (index == 5) {
+      $header_top.css('background', 'rgba(201, 240, 242, .9)');
+    }
     $nav.css('background', 'rgba(0, 47, 77, .25)');
     if (index == 5) {
         $('#fp-nav').hide();
@@ -62,4 +76,14 @@ $('.wrapper').fullpage({
     //   $nav.css('background', 'rgba(0, 47, 77, .25)');
     // }
   } 
-}); 
+});
+
+$("#date-picker-searchteetime").on('click', function() {
+    // var datePicker = $('#date-picker-searchteetime').data("kendoDatePicker");
+    // datePicker.open();
+    // if ($('#date-picker-searchteetime_dateview').css('display') == 'none') {
+    //     datePicker.open();
+    // } else {
+    //     datePicker.close();
+    // }
+});

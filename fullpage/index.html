@@ -12,15 +12,13 @@
 </head>
 
 <body>
-<div class="wrapper">
-  
-  <header>
+    <header>
   
   <div class="header-top clearfix">
     
     <h1 class="l-left">
       <a href="">
-          <img src="./assets/images/logo_homepage.png" />
+          <img class="logo" src="./assets/images/logo_homepage.png" />
       </a>
     </h1>
 
@@ -56,7 +54,7 @@
   </div>
   </div>
 
-  <<!-- nav class="hide">
+  <!-- nav class="hide">
     <ul id="menu">
       <li data-menuanchor="firstSection">
         <a href="#firstSection" title="First Section">Giới Thiệu</a>
@@ -80,7 +78,7 @@
   </nav>
 
 </header>
-
+<div class="wrapper">
   <section class="home fullpage">
     <div class="wrap-mobile">
         <div class="iphone-containerf">
@@ -94,7 +92,7 @@
                     </div>
                 </div>
             </li>
-            <li ng-class="{active:Tabb2b===2}"><img width="473" height="858" src="./assets/images/ads-1.jpg" alt="golfbooking-tablet1"></li>
+            <li><img width="473" height="858" src="./assets/images/ads-1.jpg" alt="golfbooking-tablet1"></li>
         </ul>
     </div>
     <div class="holder-bg">
@@ -108,7 +106,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="booking-tilte ng-binding"></div><span class="tee-time-from-home ng-binding" ng-bind="vm.teeTimeObj.from_time_label">5:30</span> <span class="tee-time-to-home ng-binding" ng-bind="vm.teeTimeObj.to_time_label">16:00</span>
+                    <div class="booking-tilte ng-binding"></div>
                     <div class="field-option-time ng-isolate-scope ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" gf-dual-slider-home="" from-date-label="vm.teeTimeObj.from_time_label" to-date-label="vm.teeTimeObj.to_time_label" from-date="vm.teeTimeObj.from_time" to-date="vm.teeTimeObj.to_time" min="330" max="960" step="30">
                         <div class="sliders_step1">
                             <div id="slider-range"></div>
@@ -345,19 +343,90 @@
     </div>
 </div>
     </div>
-    <h3>This is the first section</h3>
+    <h3 class="heading-section">Hệ Thống Booking Teetimes Online
+
+        <div class="down-app">Tải App 
+            <a href=""><img src="./assets/images/down-android-icon.png" class="iphone"></a>
+            <a href=""><img src="./assets/images/down-ios-icon.png" class="iphone"></a>
+        </div>
+    </h3>
   </section>
 
   <section class="second fullpage">
-    <h3>This is the second section</h3>
+    <div class="wrap-mobile">
+        <div class="iphone-containerf">
+          <img src="./assets/images/iphonewhite2.png" alt="golfbooking-iphone" class="iphone">
+        <div class="mask">
+            <ul class="screens">
+                <li ng-class="{active:Tabb2b===1}" class="active">
+                    <div class="change_text_mobile slick-initialized slick-slider">
+                        <div class="slick-list draggable" tabindex="0">
+                            <div class="slick-track" style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px); transition: transform 500ms ease 0s;"><img src="./assets/images/booking-app-3.jpg" alt="golfbooking-iphone3" class="slick-slide slick-cloned" data-slick-index="-1" style="width: 0px;"><img src="./assets/images/booking-app-1.jpg" alt="golfbooking-iphone1" class="slick-slide" data-slick-index="0" style="width: 0px;"><img src="./assets/images/booking-app-2.jpg" alt="golfbooking-iphone2" class="slick-slide slick-active" data-slick-index="1" style="width: 0px;"><img src="./assets/images/booking-app-3.jpg" alt="golfbooking-iphone3" class="slick-slide" data-slick-index="2" style="width: 0px;"><img src="./assets/images/booking-app-1.jpg" alt="golfbooking-iphone1" class="slick-slide slick-cloned" data-slick-index="3" style="width: 0px;"></div>
+                        </div>
+                    </div>
+                </li>
+                <!-- <li><img width="473" height="858" src="./assets/images/ads-1.jpg" alt="golfbooking-tablet1"></li> -->
+            </ul>
+        </div>
+        <div class="holder-bg">
+            <div class="background-booking">
+                
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <h3 class="heading-section">Hệ Thống Booking Teetimes Online
+
+        <div class="down-app">Tải App 
+            <a href=""><img src="./assets/images/down-android-icon.png" class="iphone"></a>
+            <a href=""><img src="./assets/images/down-ios-icon.png" class="iphone"></a>
+        </div>
+    </h3>
+
+    <div class="clouds">
+        <img src="./assets/images/ps-cloud-1.png" alt="" class="ps-cloud-1">
+    </div>
   </section>
 
   <section  class="third fullpage">
-    <h3>This is the third section</h3>
+    <div class="wrap-mobile">
+        <div class="iphone-containerf">
+          <img src="./assets/images/iphonewhite3.png" alt="golfbooking-iphone" class="iphone">
+        <div class="mask">
+            <ul class="screens">
+                <li ng-class="{active:Tabb2b===1}" class="active">
+                    <div class="change_text_mobile slick-initialized slick-slider">
+                        <div class="slick-list draggable" tabindex="0">
+                            <div class="slick-track" style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px); transition: transform 500ms ease 0s;"><img src="./assets/images/booking-app-3.jpg" alt="golfbooking-iphone3" class="slick-slide slick-cloned" data-slick-index="-1" style="width: 0px;"><img src="./assets/images/booking-app-1.jpg" alt="golfbooking-iphone1" class="slick-slide" data-slick-index="0" style="width: 0px;"><img src="./assets/images/booking-app-2.jpg" alt="golfbooking-iphone2" class="slick-slide slick-active" data-slick-index="1" style="width: 0px;"><img src="./assets/images/booking-app-3.jpg" alt="golfbooking-iphone3" class="slick-slide" data-slick-index="2" style="width: 0px;"><img src="./assets/images/booking-app-1.jpg" alt="golfbooking-iphone1" class="slick-slide slick-cloned" data-slick-index="3" style="width: 0px;"></div>
+                        </div>
+                    </div>
+                </li>
+                <!-- <li><img width="473" height="858" src="./assets/images/ads-1.jpg" alt="golfbooking-tablet1"></li> -->
+            </ul>
+        </div>
+        <div class="holder-bg">
+            <div class="background-booking">
+                
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <h3 class="heading-section">Booking Golf Course <br/>& Hotel</h3>
+    <div class="clouds">
+        <img src="./assets/images/ps-cloud-1.png" alt="" class="ps-cloud-1">
+    </div>
   </section>
 
   <section  class="fourth fullpage">
-    <h3>This is the fourth section</h3>
+    <div class="box-img-sk">
+        <img src="./assets/images/su_kien_1.png" />
+    </div>
+    <h3 class="heading-section">Sự Kiện<br/> GOLF FLC</h3>
+    <div class="clouds">
+        <img src="./assets/images/ps-cloud-2.png" alt="" class="ps-cloud-2">
+    </div>
   </section>
 
   <!-- <section class="vertical-scrolling">
@@ -367,9 +436,12 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.js"></script> -->
-<script src="./assets/js/jquery/jquery.fullPage.js"></script>
+<script type="text/javascript" src="./assets/js/angular/angular.min.js"></script>
+<script type="text/javascript" src="./assets/js/other/kendo.custom.min.js"></script>
+<script type="text/javascript" src="./assets/js/other/kendo.all.min.js"></script>
+<script type="text/javascript" src="./assets/js/other/angular-kendo.min.js"></script>
 
+<script src="./assets/js/jquery/jquery.fullPage.js"></script>
 <script type="text/javascript" src="assets/js/main/main.js"></script>
 </body>
 </html>
